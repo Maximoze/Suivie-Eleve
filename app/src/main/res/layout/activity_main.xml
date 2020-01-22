@@ -21,6 +21,7 @@
         android:layout_width="171dp"
         android:layout_height="62dp"
         android:layout_marginTop="104dp"
+        android:onClick="toEnseingant"
         android:text="@string/buttonEnseignant"
         app:layout_constraintEnd_toEndOf="@+id/buttonParent"
         app:layout_constraintStart_toStartOf="@+id/buttonParent"
