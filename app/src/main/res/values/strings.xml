@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Suivi-Eleve</string>
+    <string name="buttonEnseignant">Enseignant</string>
+    <string name="buttonParent">Parent</string>
 </resources>
