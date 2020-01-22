@@ -21,8 +21,14 @@ public class MainActivity extends AppCompatActivity {
     public void toEnseingant (View view) {
         // Do something in response to button
         Intent intentEnseignant = new Intent(this, EnseignantDashbordActivity.class);
-
         startActivity(intentEnseignant);
+    }
+
+    /** Called when the user taps the Parent button */
+    public void toParent (View view) {
+        // Do something in response to button
+        Intent intentParent = new Intent(this, ParentAcceuilActivity.class);
+        startActivity(intentParent);
     }
 
 }
