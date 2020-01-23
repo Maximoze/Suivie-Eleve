@@ -1,16 +1,16 @@
-package com.example.suivi_eleve.ui.notifications;
+package com.example.suivi_eleve.ui.Activites;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class NotificationsViewModel extends ViewModel {
+public class ActivitesViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public NotificationsViewModel() {
+    public ActivitesViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+        mText.setValue("This is Activites fragment");
     }
 
     public LiveData<String> getText() {

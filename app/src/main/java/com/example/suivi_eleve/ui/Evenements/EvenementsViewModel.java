@@ -1,16 +1,16 @@
-package com.example.suivi_eleve.ui.home;
+package com.example.suivi_eleve.ui.Evenements;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class EvenementsViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public EvenementsViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("This is Evenements fragment");
     }
 
     public LiveData<String> getText() {

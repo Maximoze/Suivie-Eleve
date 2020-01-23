@@ -1,16 +1,16 @@
-package com.example.suivi_eleve.ui.dashboard;
+package com.example.suivi_eleve.ui.Observations;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class DashboardViewModel extends ViewModel {
+public class ObservationsViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public DashboardViewModel() {
+    public ObservationsViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is dashboard fragment");
+        mText.setValue("This is Observations fragment");
     }
 
     public LiveData<String> getText() {

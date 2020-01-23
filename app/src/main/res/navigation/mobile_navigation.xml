@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_activites"
-        android:name="com.example.suivi_eleve.ui.home.HomeFragment"
+        android:name="com.example.suivi_eleve.ui.Activites.ActivitesFragment"
         android:label="@string/title_activites"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_activites" />
 
     <fragment
         android:id="@+id/navigation_observations"
-        android:name="com.example.suivi_eleve.ui.dashboard.DashboardFragment"
+        android:name="com.example.suivi_eleve.ui.Observations.ObservationsFragment"
         android:label="@string/title_observations"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_observations" />
 
     <fragment
         android:id="@+id/navigation_evennements"
-        android:name="com.example.suivi_eleve.ui.notifications.NotificationsFragment"
+        android:name="com.example.suivi_eleve.ui.Evenements.EvenementsFragment"
         android:label="@string/title_evenements"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_evenements" />
 </navigation>
