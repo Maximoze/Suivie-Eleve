@@ -3,7 +3,7 @@
 
     <item
         android:id="@+id/navigation_activites"
-        android:icon="@drawable/ic_activites_a_faire"
+        android:icon="@drawable/ic_activites"
         android:title="@string/title_activites" />
 
     <item
@@ -15,5 +15,14 @@
         android:id="@+id/navigation_evennements"
         android:icon="@drawable/ic_event"
         android:title="@string/title_evenements" />
+    <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/ic_chat"
+        android:title="@string/title_chat" />
+
+    <item
+        android:id="@+id/navigation_Photos"
+        android:icon="@drawable/ic_photos"
+        android:title="@string/title_photos" />
 
 </menu>
