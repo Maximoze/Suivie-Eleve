@@ -2,5 +2,8 @@
     <string name="app_name">Suivi-Eleve</string>
     <string name="buttonEnseignant">Enseignant</string>
     <string name="buttonParent">Parent</string>
-
+    <string name="title_activity_parent_acceuil">ParentAcceuilActivity</string>
+    <string name="title_activites">Activités à Faire</string>
+    <string name="title_observations">Observations</string>
+    <string name="title_evenements">Evenements</string>
 </resources>
