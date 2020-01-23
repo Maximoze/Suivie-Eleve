@@ -20,7 +20,7 @@ public class ParentAcceuilActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_activites, R.id.navigation_observations, R.id.navigation_evennements)
+                R.id.navigation_activites, R.id.navigation_observations, R.id.navigation_evennements,R.id.navigation_chat)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
