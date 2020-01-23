@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_activites">
+
+    <fragment
+        android:id="@+id/navigation_activites"
+        android:name="com.example.suivi_eleve.ui.home.HomeFragment"
+        android:label="@string/title_activites"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_observations"
+        android:name="com.example.suivi_eleve.ui.dashboard.DashboardFragment"
+        android:label="@string/title_observations"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_evennements"
+        android:name="com.example.suivi_eleve.ui.notifications.NotificationsFragment"
+        android:label="@string/title_evenements"
+        tools:layout="@layout/fragment_notifications" />
+</navigation>
