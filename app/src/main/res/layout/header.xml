@@ -20,7 +20,6 @@
             android:layout_gravity="bottom"
             android:layout_marginStart="30dp"
             android:layout_marginTop="14dp"
-            android:srcCompat="@drawable/ic_launcher_background"
             app:srcCompat="@drawable/profil" />
 
         <TextView
