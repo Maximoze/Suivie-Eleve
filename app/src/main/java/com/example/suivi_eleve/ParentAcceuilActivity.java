@@ -1,6 +1,7 @@
 package com.example.suivi_eleve;
 
 import android.os.Bundle;
+import android.widget.Toolbar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -24,7 +25,7 @@ public class ParentAcceuilActivity extends AppCompatActivity {
                 R.id.navigation_activites, R.id.navigation_observations, R.id.navigation_evennements,R.id.navigation_chat)
                 .build();*/
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        
+
         //NavigationUI.setupActionBarWithNavController(this, navController);
 
         NavigationUI.setupWithNavController(navView, navController);
