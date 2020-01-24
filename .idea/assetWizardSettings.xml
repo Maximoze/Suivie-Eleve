@@ -151,10 +151,24 @@
                   <entry key="vectorAssetStep">
                     <value>
                       <PersistentState>
+                        <option name="children">
+                          <map>
+                            <entry key="clipartAsset">
+                              <value>
+                                <PersistentState>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/social/ic_person_outline_black_24dp.xml" />
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                         <option name="values">
                           <map>
-                            <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_activites" />
+                            <entry key="outputName" value="ic_profil" />
                             <entry key="sourceFile" value="F:\Android Devollopement\Android Project\Icones\4288584andbusinessfinancepersonalportfolioprofileresume-115772_115741.svg" />
                           </map>
                         </option>
