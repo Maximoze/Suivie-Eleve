@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Suivi-Eleve</string>
-    <string name="buttonEnseignant">Enseignant</string>
-    <string name="buttonParent">Parent</string>
-    <string name="your_string"><u>Tableau de bord</u></string> // souligner text
-
-</resources>
