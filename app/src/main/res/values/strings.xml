@@ -13,4 +13,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="drawer_open">drawerOpen</string>
     <string name="drawer_close">drawerClose</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="your_string"><u>Tableau de bord</u></string>
 </resources>

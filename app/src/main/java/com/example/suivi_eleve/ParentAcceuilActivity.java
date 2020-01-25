@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -19,45 +20,46 @@ import androidx.navigation.ui.NavigationUI;
 
 public class ParentAcceuilActivity extends AppCompatActivity /*implements NavigationView.OnNavigationItemSelectedListener*/{
 
-    DrawerLayout drawerLayout;
+    private DrawerLayout drawer;
     NavigationView navigationView;
+    NavController navController;
     ActionBarDrawerToggle toggle;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parent_acceuil);
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
 
-        /*AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_activites, R.id.navigation_observations, R.id.navigation_evennements,R.id.navigation_chat)
-                .build();*/
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        //Toolbar toolbar = findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
-        //NavigationUI.setupActionBarWithNavController(this, navController);
+        drawer = findViewById(R.id.drawer_layout);
+
+        toggle = new ActionBarDrawerToggle(this, drawer,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment);
 
         NavigationUI.setupWithNavController(navView, navController);
 
-        /*drawerLayout = findViewById(R.id.drawer);
-        navigationView = findViewById(R.id.navigationView);
-        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(false);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);*/
-
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    /*@Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        switch (menuItem.getItemId()){
-            case R.id.eleve_1:
-                Toast.makeText(this,"Eleve 1 Selectionné", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.eleve_2:
-                Toast.makeText(this,"Eleve 2 Selectionné", Toast.LENGTH_SHORT).show();
-                break;
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (toggle.onOptionsItemSelected(item)) {
+            return true;
         }
-        return false;*/
+        return super.onOptionsItemSelected(item);
+    }
 
+    @Override
+    public void onBackPressed() {
+        if (drawer.isDrawerOpen(GravityCompat.START)){
+            drawer.closeDrawer(GravityCompat.START);
+        }else{
+            super.onBackPressed();
+        }
+    }
 }
