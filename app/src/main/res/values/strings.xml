@@ -3,7 +3,7 @@
     <string name="buttonEnseignant">Enseignant</string>
     <string name="buttonParent">Parent</string>
     <string name="title_activity_parent_acceuil">Suivie-Elève</string>
-    <string name="title_activites">Activités</string>
+    <string name="title_activites">Activités A Faire</string>
     <string name="title_observations">Observations</string>
     <string name="title_evenements">Evenements</string>
     <string name="title_chat">Chat </string>
@@ -16,4 +16,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="your_string"><u>Tableau de bord</u></string>
+    <string name="libele_activite">Libellé</string>
+    <string name="type_activites">Type</string>
+    <string name="date_limite">Date limite</string>
 </resources>

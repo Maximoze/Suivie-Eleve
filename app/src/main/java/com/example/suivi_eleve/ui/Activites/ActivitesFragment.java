@@ -24,12 +24,12 @@ public class ActivitesFragment extends Fragment {
                 ViewModelProviders.of(this).get(ActivitesViewModel.class);
         View root = inflater.inflate(R.layout.fragment_activites, container, false);
         final TextView textView = root.findViewById(R.id.text_home);
-        activitesViewModel.getText().observe(this, new Observer<String>() {
+        /*activitesViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
-        });
+        });*/
         return root;
     }
 }
