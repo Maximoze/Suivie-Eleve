@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "882809430447",
+    "firebase_url": "https://suivi-eleve.firebaseio.com",
+    "project_id": "suivi-eleve",
+    "storage_bucket": "suivi-eleve.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882809430447:android:8802f175d50413d9e64f5a",
+        "android_client_info": {
+          "package_name": "com.example.suivi_eleve"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "882809430447-qg5tdomtfdcnc4pg5o7vee1a30renuvo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5hf6JvTcRMdJO8BsJvx_w_rtIu7MBCtU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "882809430447-qg5tdomtfdcnc4pg5o7vee1a30renuvo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
