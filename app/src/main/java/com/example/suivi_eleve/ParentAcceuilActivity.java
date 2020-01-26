@@ -1,7 +1,10 @@
 package com.example.suivi_eleve;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -18,24 +21,25 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-public class ParentAcceuilActivity extends AppCompatActivity /*implements NavigationView.OnNavigationItemSelectedListener*/{
+public class ParentAcceuilActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
-    NavigationView navigationView;
     NavController navController;
+    NavigationView navigationView;
     ActionBarDrawerToggle toggle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parent_acceuil);
         BottomNavigationView navView = findViewById(R.id.nav_view);
-
+        navigationView = findViewById(R.id.navigationView);
         //Toolbar toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
 
         drawer = findViewById(R.id.drawer_layout);
 
-        toggle = new ActionBarDrawerToggle(this, drawer,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        toggle = new ActionBarDrawerToggle(this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -44,6 +48,11 @@ public class ParentAcceuilActivity extends AppCompatActivity /*implements Naviga
         NavigationUI.setupWithNavController(navView, navController);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        navigationView.setNavigationItemSelectedListener(this);
+
+
+
     }
 
     @Override
@@ -51,15 +60,31 @@ public class ParentAcceuilActivity extends AppCompatActivity /*implements Naviga
         if (toggle.onOptionsItemSelected(item)) {
             return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 
     @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+        switch (menuItem.getItemId()) {
+            case R.id.profileparents:
+                Intent profilIntent = new Intent(ParentAcceuilActivity.this, ProfilParentActivity.class );
+                startActivity(profilIntent);
+                break;
+        }
+
+        return false;
+    }
+
+    @Override
     public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)){
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        }else{
+        } else {
             super.onBackPressed();
         }
     }
+
+
 }
