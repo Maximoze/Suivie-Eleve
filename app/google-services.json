@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "882809430447-bjk9a89dvqpacd9ui7ertrdligshlqnp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.suivi_eleve",
+            "certificate_hash": "1f61a54ac83900e0cefd66de3b31775d64fac7ab"
+          }
+        },
+        {
           "client_id": "882809430447-qg5tdomtfdcnc4pg5o7vee1a30renuvo.apps.googleusercontent.com",
           "client_type": 3
         }
