@@ -20,4 +20,12 @@
     <string name="libele_activite">Libellé</string>
     <string name="type_activites">Type</string>
     <string name="date_limite">Date limite</string>
+    <string name="title_creer_une_activite">Créer une activité</string>
+    <string name="ajouter_image">Ajouter une image</string>
+    <string name="title_hint_libelle_activite">Libellé de l\'activité</string>
+    <string name="title_hint_type_ajout_activites">Type de l\'activite</string>
+    <string name="title_valider_creer_activite">Valider</string>
+    <string name="title_date_ajout_activite">Donner la date limite</string>
+    <string name="description_addImageButton">boutton pour ajouter une image</string>
+    <string name="Description_imageadded">Affichage image choisie</string>
 </resources>

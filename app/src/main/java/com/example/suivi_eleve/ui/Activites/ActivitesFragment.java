@@ -42,6 +42,7 @@ public class ActivitesFragment extends Fragment {
             }
         });*/
 
+
         return root;
     }
 }

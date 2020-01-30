@@ -1,115 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivitesActivity">
-
-    <EditText
-        android:id="@+id/editText10"
-        android:layout_width="243dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="28dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView10"
-        app:layout_constraintEnd_toEndOf="@+id/editText9"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editText9" />
+    tools:context=".ActivitesActivity" >
 
     <TextView
-        android:id="@+id/textView10"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="40dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toStartOf="@+id/editText10"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView9" />
+        android:id="@+id/text_ajout_activite"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="false"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="39dp"
+        android:drawableStart="@drawable/activity"
+        android:gravity="left|center_vertical"
+        android:text="@string/title_creer_une_activite"
+        android:textColor="@color/c3"
+        android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="40dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toStartOf="@+id/editText9" />
+    <View
+        android:id="@+id/divider_activite"
+        android:layout_width="180dp"
+        android:layout_height="1dp"
+        android:foregroundGravity="center"
+        android:layout_below="@+id/text_ajout_activite"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="false"
+        android:layout_marginStart="113dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="122dp"
+        android:background="@color/c3" />
 
-    <EditText
-        android:id="@+id/editText9"
-        android:layout_width="243dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="28dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editText" />
+    <RelativeLayout
+        android:id="@+id/activite_formulaire_contenair"
+        android:layout_width="wrap_content"
+        android:layout_height="469dp"
+        android:layout_below="@+id/divider_activite"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="false"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/roud_background">
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="20dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toStartOf="@+id/editText"
-        app:layout_constraintHorizontal_bias="0.173"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/ajoutImage_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/ajouter_image"
+            android:textColor="#004D40"
+            android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="243dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <ImageButton
+            android:id="@+id/addImageButton"
+            android:layout_width="64dp"
+            android:layout_height="43dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/ajoutImage_text_view"
+            android:background="@drawable/ic_add_image"
+            android:contentDescription="@string/description_addImageButton" />
+
+        <ImageView
+            android:id="@+id/imageadded"
+            android:layout_width="274dp"
+            android:layout_height="169dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="69dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/activite"
+            android:contentDescription="@string/Description_imageadded" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="251dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/imageadded"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="144dp"
+            android:background="@drawable/bordure"
+            android:textColorHint="#004D40"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Body1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_ajout_libelle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/title_hint_libelle_activite"
+                android:textColorHint="#004D40" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="251dp"
+            android:layout_height="60dp"
+            android:layout_above="@+id/dateEditText"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="15dp"
+
+            android:background="@drawable/bordure"
+            android:textColorHint="#004D40"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Body1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/typeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_text_ajout_libelle"
+                android:hint="@string/title_hint_type_ajout_activites"
+                android:textColorHint="#004D40" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dateEditText"
+            android:layout_width="251dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/bordure"
+            android:ems="10"
+            android:inputType="date|textShortMessage"
+            android:singleLine="false"
+            android:textColor="#535252"
+            android:textColorHint="#004D40"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/date_limite"
+                android:textColorHint="#232325" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </RelativeLayout>
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="252dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="16dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/titleActiviteAFaire"
-        android:layout_width="241dp"
-        android:layout_height="46dp"
+        android:id="@+id/buttonValider"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@+id/activite_formulaire_contenair"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="95dp"
         android:layout_marginTop="24dp"
-        android:gravity="bottom|center"
-        android:text="@string/titleActiviteAFaire"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.426"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginEnd="95dp"
+        android:background="@drawable/roud_background"
+        android:gravity="center"
+        android:text="@string/title_valider_creer_activite"
+        android:textSize="24sp" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="60dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="48dp"
-        app:layout_constraintBottom_toBottomOf="@+id/titleActiviteAFaire"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/activity" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
