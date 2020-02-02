@@ -16,7 +16,7 @@
         android:layout_marginStart="34dp"
         android:layout_marginTop="27dp"
         android:layout_marginEnd="39dp"
-        android:drawableStart="@drawable/activity"
+        android:drawableStart="@drawable/activite"
         android:gravity="left|center_vertical"
         android:text="@string/title_creer_une_activite"
         android:textColor="@color/c3"
@@ -111,7 +111,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="251dp"
             android:layout_height="60dp"
-            android:layout_above="@+id/dateEditText"
+            android:layout_above="@+id/date"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="7dp"
@@ -135,7 +135,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/dateEditText"
+            android:id="@+id/date"
             android:layout_width="251dp"
             android:layout_height="60dp"
             android:layout_alignParentStart="true"
@@ -154,6 +154,7 @@
             app:hintEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dateEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/date_limite"

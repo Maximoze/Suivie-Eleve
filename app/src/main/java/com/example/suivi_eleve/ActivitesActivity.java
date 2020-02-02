@@ -1,30 +1,36 @@
 package com.example.suivi_eleve;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.Manifest;
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
+import android.webkit.MimeTypeMap;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 public class ActivitesActivity extends AppCompatActivity {
-
+    int countActivites;
     private static final int IMAGE_PICK_CODE = 1000;
     private static final int PERMISSION_CODE = 1001;
 
@@ -33,7 +39,13 @@ public class ActivitesActivity extends AppCompatActivity {
     EditText libelle_activite;
     EditText type_activite;
     EditText date_activite;
-    DatabaseReference reference;
+    DatabaseReference activiteRef;
+    DatabaseReference countActivitesRef;
+    StorageReference storageReference;
+    Button validateButton;
+
+    String libele, type, date;
+    Uri imageUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,67 +56,110 @@ public class ActivitesActivity extends AppCompatActivity {
         imageButton = findViewById(R.id.addImageButton);
         libelle_activite = findViewById(R.id.edit_text_ajout_libelle);
         type_activite = findViewById(R.id.typeEditText);
-       // date_activite = findViewById(R.id.dateEditText);
-        final TextView textView = findViewById(R.id.textView2);
+        date_activite = findViewById(R.id.dateEditText);
+        validateButton = findViewById(R.id.buttonValider);
 
+        activiteRef = FirebaseDatabase.getInstance().getReference();
+        countActivitesRef = FirebaseDatabase.getInstance().getReference().child("activites").child("1");
+        storageReference = FirebaseStorage.getInstance().getReference("Images");
 
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-                    if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED){
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
                         //Permission refusé, le demander
-                        String [] permissions = {Manifest.permission.READ_EXTERNAL_STORAGE};
-                        requestPermissions(permissions,PERMISSION_CODE);
-                    }else{
+                        String[] permissions = {Manifest.permission.READ_EXTERNAL_STORAGE};
+                        requestPermissions(permissions, PERMISSION_CODE);
+                    } else {
                         //permission accordé
                         pickImageFromGallery();
                     }
-                }else{
+                } else {
                     pickImageFromGallery();
                 }
             }
         });
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("messages");
 
-        // Read from the database
-        myRef.addValueEventListener(new ValueEventListener() {
+        countActivitesRef.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                String value = dataSnapshot.getValue(String.class);
-                textView.setText(value);
-                Log.d("Activites", "Value is: " + value);
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                countActivites = (int) dataSnapshot.getChildrenCount();
             }
 
             @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w("Activites", "Failed to read value.", error.toException());
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(ActivitesActivity.this, "NO data", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        validateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                libele = libelle_activite.getText().toString();
+                type = type_activite.getText().toString();
+                date = date_activite.getText().toString();
+
+                writeNewActivity(libele, type, date);
+                uploaderImages();
+
+
             }
         });
 
     }
 
-    private void pickImageFromGallery(){
+    private void writeNewActivity(String libelle, String type, String date) {
+
+        ActiviteColoneContent activiteColoneContent = new ActiviteColoneContent(libelle, type, date);
+        activiteRef.child("activites").child("1").child("" + countActivites++).setValue(activiteColoneContent);
+
+        Toast.makeText(ActivitesActivity.this, "Activites Added", Toast.LENGTH_LONG).show();
+    }
+
+    private void uploaderImages() {
+        StorageReference ref = storageReference.child(1 + "." + getExtension(imageUri));
+
+        ref.putFile(imageUri)
+                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        // Get a URL to the uploaded content
+                        Toast.makeText(ActivitesActivity.this,"Image upload successfull",Toast.LENGTH_LONG).show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        // Handle unsuccessful uploads
+                        // ...
+                    }
+                });
+    }
+
+    private void pickImageFromGallery() {
         Intent intent = new Intent(Intent.ACTION_PICK);
         intent.setType("image/*");
         startActivityForResult(intent, IMAGE_PICK_CODE);
     }
 
+    String getExtension(Uri uri) {
+        ContentResolver contentResolver = getContentResolver();
+        MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
+        return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
+    }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-            switch (requestCode){
-                case PERMISSION_CODE:
-                    if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                        pickImageFromGallery();
-                    }else{
-                        Toast.makeText(this, "Permission non accordée.....!",Toast.LENGTH_SHORT).show();
-                    }
-            }
+        switch (requestCode) {
+            case PERMISSION_CODE:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    pickImageFromGallery();
+                } else {
+                    Toast.makeText(this, "Permission non accordée.....!", Toast.LENGTH_SHORT).show();
+                }
+        }
     }
 
     @Override
@@ -112,6 +167,7 @@ public class ActivitesActivity extends AppCompatActivity {
         if (resultCode == RESULT_OK && requestCode == IMAGE_PICK_CODE) {
             imageView.setBackground(null);
             imageView.setImageURI(data.getData());
+            imageUri = data.getData();
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
