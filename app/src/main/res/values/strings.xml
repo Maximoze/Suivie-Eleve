@@ -39,4 +39,8 @@
     <string name="title_hint_type_ajout_heure">heure</string>
     <string name="title_hint_type_ajout_lieu">lieu</string>
     <string name="title_hint_type_ajout_cotisation">cotisation</string>
+
+
+    <string name="title_faire_lappel">RAPPEL</string>
+
 </resources>

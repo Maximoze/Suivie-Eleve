@@ -270,7 +270,7 @@
         android:layout_marginBottom="17dp"
         android:background="@drawable/roud_background"
         android:gravity="center"
-        android:text="valider"
+        android:text="Ajouter"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
