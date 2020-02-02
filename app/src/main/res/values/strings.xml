@@ -42,5 +42,14 @@
 
 
     <string name="title_faire_lappel">RAPPEL</string>
+    <string name="Eleve">eleve</string>
+    <string name="eleve">eleve</string>
+    <string name="Type">Type</string>
+    <string name="type">type</string>
+    <string name="note">Note</string>
+    <string name="Note">Note</string>
+    <string name="envoyer">envoyer</string>
+    <string name="Tableau_de_bord">Tableau de bord</string>
+    <string name="Ajouter">Ajouter</string>
 
 </resources>

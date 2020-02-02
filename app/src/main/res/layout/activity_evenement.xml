@@ -22,6 +22,8 @@
         android:textColor="@color/c3"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
@@ -270,7 +272,7 @@
         android:layout_marginBottom="17dp"
         android:background="@drawable/roud_background"
         android:gravity="center"
-        android:text="Ajouter"
+        android:text="@string/Ajouter"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

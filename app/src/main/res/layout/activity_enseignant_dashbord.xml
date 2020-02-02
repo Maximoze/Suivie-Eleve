@@ -22,7 +22,7 @@
         app:layout_constraintHorizontal_bias="0.659"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Tableau de bord" />
+        tools:text="@string/Tableau_de_bord" />
 
     <Button
         android:id="@+id/button"
