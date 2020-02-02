@@ -28,4 +28,15 @@
     <string name="title_date_ajout_activite">Donner la date limite</string>
     <string name="description_addImageButton">boutton pour ajouter une image</string>
     <string name="Description_imageadded">Affichage image choisie</string>
+
+
+
+    <string name="title_creer_un_evenement">Créer un evenement</string>
+    <string name="date_limite_evenement">Date limite_ev</string>
+    <string name="title_hint_type_ajout_evenement">Type de l\'evenement</string>
+    <string name="title_hint_type_ajout_libele">libele</string>
+    <string name="title_hint_type_ajout_description">description</string>
+    <string name="title_hint_type_ajout_heure">heure</string>
+    <string name="title_hint_type_ajout_lieu">lieu</string>
+    <string name="title_hint_type_ajout_cotisation">cotisation</string>
 </resources>
