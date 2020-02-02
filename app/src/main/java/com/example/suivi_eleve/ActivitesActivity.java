@@ -9,13 +9,19 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class ActivitesActivity extends AppCompatActivity {
 
@@ -39,6 +45,7 @@ public class ActivitesActivity extends AppCompatActivity {
         libelle_activite = findViewById(R.id.edit_text_ajout_libelle);
         type_activite = findViewById(R.id.typeEditText);
        // date_activite = findViewById(R.id.dateEditText);
+        final TextView textView = findViewById(R.id.textView2);
 
 
         imageButton.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +63,27 @@ public class ActivitesActivity extends AppCompatActivity {
                 }else{
                     pickImageFromGallery();
                 }
+            }
+        });
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("messages");
+
+        // Read from the database
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                String value = dataSnapshot.getValue(String.class);
+                textView.setText(value);
+                Log.d("Activites", "Value is: " + value);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w("Activites", "Failed to read value.", error.toException());
             }
         });
 

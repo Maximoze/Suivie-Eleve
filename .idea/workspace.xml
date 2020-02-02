@@ -6,16 +6,12 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="fragment" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="info" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Activit" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="warn" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9ea417f-a12b-4c5e-b761-eecaeb0110ff" name="Default Changelist" comment="Ajout des cick listener sur les bouttons de la drawer navigation effectuer">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/activity.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/evenement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/observation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/rappel.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -33,18 +29,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suivi_eleve/EvenementActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suivi_eleve/EvenementActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suivi_eleve/ObservationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suivi_eleve/ObservationActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/activity.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/evenement.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/observation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/rappel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/google-services.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/suivi_eleve/ActivitesActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/suivi_eleve/ActivitesActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_activite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_activite.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_enseignant_dashbord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_enseignant_dashbord.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_evenement.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_evenement.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_observation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_observation.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +43,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="5a216846" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="R58M51GXSTV" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -65,33 +53,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/suivi_eleve/EvenementActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
+            <state relative-caret-position="204">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/suivi_eleve/ActivitesActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="86" column="13" lean-forward="true" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1364#2127#0" expanded="true" />
+                <element signature="e#2126#2127#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_observation.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="2227">
-              <caret line="131" column="34" selection-start-line="131" selection-start-column="34" selection-end-line="131" selection-end-column="34" />
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_evenement.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="4777">
-              <caret line="281" column="29" selection-start-line="281" selection-start-column="29" selection-end-line="281" selection-end-column="29" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -102,26 +93,6 @@
             </state>
           </provider>
           <provider selected="true" editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_enseignant_dashbord.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/choix.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/activite.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -186,15 +157,16 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/suivi_eleve/ParentAcceuilActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_drawer.xml" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/suivi_eleve/ui/Activites/ActivitesFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/suivi_eleve/EvenementActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/suivi_eleve/ObservationActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_evenement.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_enseignant_dashbord.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_activite.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_observation.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_activite.xml" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/suivi_eleve/ActivitesActivity.java" />
       </list>
     </option>
   </component>
@@ -209,7 +181,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -226,8 +197,23 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Suivi-Eleve" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="Suivi-Eleve" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -240,8 +226,12 @@
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ACER\AndroidStudioProjects\Suivie-Eleve\app\src\main\res\drawable-xxxhdpi" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ACER\AndroidStudioProjects\Suivie-Eleve\app" />
+      <recent name="C:\Users\HP\Desktop\Suivi-E\Suivie-Eleve\app\src\main\res\drawable-v24" />
+      <recent name="C:\Users\ACER\AndroidStudioProjects\Suivie-Eleve\app\src\main\res\drawable-xxhdpi" />
+      <recent name="C:\Users\ACER\AndroidStudioProjects\Suivie-Eleve\app\src\main\res\drawable-xhdpi" />
+      <recent name="C:\Users\ACER\AndroidStudioProjects\Suivie-Eleve\app\src\main\res\layout" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.example.suivi_eleve" />
@@ -249,12 +239,8 @@
     <key name="android.template.parentActivityClass">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\HP\Desktop\Suivi-E\Suivie-Eleve\app\src\main\res\drawable-v24" />
-      <recent name="C:\Users\ACER\AndroidStudioProjects\Suivie-Eleve\app" />
-      <recent name="C:\Users\ACER\AndroidStudioProjects\Suivie-Eleve\app\src\main\res\drawable-xxhdpi" />
-      <recent name="C:\Users\ACER\AndroidStudioProjects\Suivie-Eleve\app\src\main\res\drawable-xhdpi" />
-      <recent name="C:\Users\ACER\AndroidStudioProjects\Suivie-Eleve\app\src\main\res\layout" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ACER\AndroidStudioProjects\Suivie-Eleve\app\src\main\res\drawable-xxxhdpi" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -468,10 +454,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49896482" visible="true" weight="0.19062027" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49896482" visible="true" weight="0.19023137" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" sideWeight="0.5010352" side_tool="true" weight="0.19087404" />
@@ -480,14 +466,14 @@
       <window_info id="Resources Explorer" order="7" weight="0.32969153" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Debug" order="0" />
-      <window_info anchor="bottom" id="Run" order="1" weight="0.32916668" />
+      <window_info anchor="bottom" id="Run" order="1" weight="0.78333336" />
       <window_info anchor="bottom" id="Logcat" order="2" weight="0.32916668" />
       <window_info anchor="bottom" id="TODO" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.32916668" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="5" visible="true" weight="0.32569557" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="5" visible="true" weight="0.3236111" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.50064266" side_tool="true" weight="0.32916668" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32916668" />
-      <window_info anchor="bottom" id="Build" order="8" sideWeight="0.4993573" weight="0.34860885" />
+      <window_info anchor="bottom" id="Build" order="8" sideWeight="0.4993573" weight="0.34583333" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32916668" />
       <window_info anchor="bottom" id="Android Profiler" order="10" />
       <window_info anchor="right" id="StringPreview" order="0" />
@@ -512,6 +498,18 @@
     <MESSAGE value="design for activites to do finsished" />
     <MESSAGE value="Ajout des cick listener sur les bouttons de la drawer navigation effectuer" />
     <option name="LAST_COMMIT_MESSAGE" value="Ajout des cick listener sur les bouttons de la drawer navigation effectuer" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/suivi_eleve/EvenementActivity.java</url>
+          <line>13</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-v21/activity_parent_acceuil.xml" />
@@ -578,6 +576,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml">
+      <provider editor-type-id="nav-designer" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
@@ -586,7 +585,6 @@
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="nav-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/suivi_eleve/ProfilParentActivity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -651,16 +649,6 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/google-services.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../friendlychat-android/build-android-start/app/src/main/java/com/google/firebase/codelab/friendlychat/FriendlyMessage.java" />
     <entry file="file://$PROJECT_DIR$/../friendlychat-android/build-android-start/app/src/main/java/com/google/firebase/codelab/friendlychat/MainActivity.java" />
     <entry file="file://$PROJECT_DIR$/../FireBaseExemple2/app/src/main/java/com/example/firebaseexemple2/MainActivity.java" />
@@ -679,18 +667,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1929#2205#0" expanded="true" />
             <element signature="e#2204#2205#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/suivi_eleve/ActivitesActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="43" column="39" lean-forward="true" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1364#2127#0" expanded="true" />
-            <element signature="e#2126#2127#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -740,33 +716,27 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/evenement.png" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/observation.png" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/rappel.png" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/suivi_eleve/EvenementActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/choix.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_observation.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="2227">
-          <caret line="131" column="34" selection-start-line="131" selection-start-column="34" selection-end-line="131" selection-end-column="34" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/activite.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/google-services.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_evenement.xml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="4777">
-          <caret line="281" column="29" selection-start-line="281" selection-start-column="29" selection-end-line="281" selection-end-column="29" />
+        <state relative-caret-position="289">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_activite.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_observation.xml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="2754">
-          <caret line="162" selection-start-line="162" selection-end-line="162" />
+        <state relative-caret-position="289">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
@@ -779,11 +749,39 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/choix.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_activite.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="2754">
+          <caret line="162" selection-start-line="162" selection-end-line="162" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/activite.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/suivi_eleve/EvenementActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/suivi_eleve/ActivitesActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="86" column="13" lean-forward="true" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1364#2127#0" expanded="true" />
+            <element signature="e#2126#2127#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

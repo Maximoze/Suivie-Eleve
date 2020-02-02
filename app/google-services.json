@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "882809430447",
-    "firebase_url": "https://suivi-eleve.firebaseio.com",
-    "project_id": "suivi-eleve",
-    "storage_bucket": "suivi-eleve.appspot.com"
+    "project_number": "866941924810",
+    "firebase_url": "https://suivi-eleve-5fbee.firebaseio.com",
+    "project_id": "suivi-eleve-5fbee",
+    "storage_bucket": "suivi-eleve-5fbee.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:882809430447:android:8802f175d50413d9e64f5a",
+        "mobilesdk_app_id": "1:866941924810:android:f18cb3661e693f03bd0b33",
         "android_client_info": {
           "package_name": "com.example.suivi_eleve"
         }
       },
       "oauth_client": [
         {
-          "client_id": "882809430447-bjk9a89dvqpacd9ui7ertrdligshlqnp.apps.googleusercontent.com",
+          "client_id": "866941924810-0acl6qjrr5jl95upvre7sc8083rooamo.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.suivi_eleve",
@@ -23,20 +23,20 @@
           }
         },
         {
-          "client_id": "882809430447-qg5tdomtfdcnc4pg5o7vee1a30renuvo.apps.googleusercontent.com",
+          "client_id": "866941924810-65temc4lifn989fgvti6tk80hesvqs82.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC5hf6JvTcRMdJO8BsJvx_w_rtIu7MBCtU"
+          "current_key": "AIzaSyDPx5Gw_yU9b7xsVy5H6YaWnh1pie5UvxU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "882809430447-qg5tdomtfdcnc4pg5o7vee1a30renuvo.apps.googleusercontent.com",
+              "client_id": "866941924810-65temc4lifn989fgvti6tk80hesvqs82.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
