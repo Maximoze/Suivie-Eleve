@@ -3,7 +3,7 @@
     <string name="buttonEnseignant">Enseignant</string>
     <string name="buttonParent">Parent</string>
     <string name="title_activity_parent_acceuil">Suivie-Elève</string>
-    <string name="title_activites">Activités A Faire</string>
+    <string name="title_activites">Activité</string>
     <string name="title_observations">Observations</string>
     <string name="title_evenements">Evenements</string>
     <string name="title_chat">Chat </string>
@@ -28,4 +28,8 @@
     <string name="title_date_ajout_activite">Donner la date limite</string>
     <string name="description_addImageButton">boutton pour ajouter une image</string>
     <string name="Description_imageadded">Affichage image choisie</string>
+    <string name="Libellé_content">Libellé content</string>
+    <string name="Desc_Image_activity">Image activity</string>
+    <string name="Type_content">Type content</string>
+    <string name="Date_content">Date content</string>
 </resources>

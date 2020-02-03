@@ -8,21 +8,22 @@
     app:cardUseCompatPadding="true">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="393dp"
+        android:layout_width="wrap_content"
+        android:layout_height="539dp"
         android:padding="16dp">
 
         <ImageView
             android:id="@+id/imageActivite"
             android:layout_width="wrap_content"
-            android:layout_height="216dp"
+            android:layout_height="350dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="0dp"
             android:layout_marginTop="13dp"
             android:layout_marginEnd="0dp"
-            android:contentDescription="Image activity"
+            android:contentDescription="@string/Desc_Image_activity"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/activite" />
 
         <TextView
@@ -31,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageActivite"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="22dp"
+            android:layout_marginStart="0dp"
             android:layout_marginTop="16dp"
             android:text="@string/libele_activite"
             android:textSize="18sp" />
@@ -42,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/libeleactivite"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="22dp"
+            android:layout_marginStart="0dp"
             android:layout_marginTop="1dp"
             android:text="@string/type_activites"
             android:textSize="18sp" />
@@ -53,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/typeactivite"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="22dp"
+            android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="43dp"
             android:text="@string/date_limite"
@@ -64,11 +65,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageActivite"
-            android:layout_marginStart="51dp"
+            android:layout_marginStart="57dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="342dp"
             android:layout_toEndOf="@+id/libeleactivite"
-            android:text="Libellé content"
+            android:text="@string/Libellé_content"
             android:textSize="18sp" />
 
         <TextView
@@ -76,11 +77,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/libeleactivite"
-            android:layout_marginStart="51dp"
+            android:layout_marginStart="57dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="342dp"
             android:layout_toEndOf="@+id/typeactivite"
-            android:text="Type content"
+            android:text="@string/Type_content"
             android:textSize="18sp" />
 
         <TextView
@@ -92,7 +93,7 @@
             android:layout_marginTop="0dp"
             android:layout_marginBottom="342dp"
             android:layout_toEndOf="@+id/dateactivite"
-            android:text="Date content"
+            android:text="@string/Date_content"
             android:textSize="18sp" />
     </RelativeLayout>
 

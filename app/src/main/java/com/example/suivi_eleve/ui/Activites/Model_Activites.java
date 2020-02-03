@@ -2,8 +2,17 @@ package com.example.suivi_eleve.ui.Activites;
 
 public class Model_Activites {
 
-    private String libelle, type, date_limite;
-    private int imageActivites;
+    private String libelle, type, date;
+    private String imageUrl;
+
+
+
+    public Model_Activites(String libelle, String type, String date, String imageUrl) {
+        this.libelle = libelle;
+        this.type = type;
+        this.date = date;
+        this.imageUrl = imageUrl;
+    }
 
     public String getLibelle() {
         return libelle;
@@ -21,19 +30,23 @@ public class Model_Activites {
         this.type = type;
     }
 
-    public String getDate_limite() {
-        return date_limite;
+    public String getDate() {
+        return date;
     }
 
-    public void setDate_limite(String date_limite) {
-        this.date_limite = date_limite;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public int getImageActivites() {
-        return imageActivites;
+    public String getimageUrl() {
+        return imageUrl;
     }
 
-    public void setImageActivites(int imageActivites) {
-        this.imageActivites = imageActivites;
+    public void tempImageName(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public Model_Activites() {
+
     }
 }

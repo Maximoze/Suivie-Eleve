@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
@@ -29,6 +30,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.util.HashMap;
+
 public class ActivitesActivity extends AppCompatActivity {
     int countActivites;
     private static final int IMAGE_PICK_CODE = 1000;
@@ -44,7 +47,7 @@ public class ActivitesActivity extends AppCompatActivity {
     StorageReference storageReference;
     Button validateButton;
 
-    String libele, type, date;
+    String libelle, type, date;
     Uri imageUri;
 
     @Override
@@ -97,12 +100,9 @@ public class ActivitesActivity extends AppCompatActivity {
         validateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                libele = libelle_activite.getText().toString();
-                type = type_activite.getText().toString();
-                date = date_activite.getText().toString();
 
-                writeNewActivity(libele, type, date);
-                uploaderImages();
+
+                writeNewActivity();
 
 
             }
@@ -110,33 +110,49 @@ public class ActivitesActivity extends AppCompatActivity {
 
     }
 
-    private void writeNewActivity(String libelle, String type, String date) {
+    private void writeNewActivity() {
 
-        ActiviteColoneContent activiteColoneContent = new ActiviteColoneContent(libelle, type, date);
-        activiteRef.child("activites").child("1").child("" + countActivites++).setValue(activiteColoneContent);
+        libelle = libelle_activite.getText().toString();
+        type = type_activite.getText().toString();
+        date = date_activite.getText().toString();
 
-        Toast.makeText(ActivitesActivity.this, "Activites Added", Toast.LENGTH_LONG).show();
-    }
-
-    private void uploaderImages() {
-        StorageReference ref = storageReference.child(1 + "." + getExtension(imageUri));
+        final StorageReference ref = storageReference.child(System.currentTimeMillis() + "." + getExtension(imageUri));
 
         ref.putFile(imageUri)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+
+
+
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        // Get a URL to the uploaded content
-                        Toast.makeText(ActivitesActivity.this,"Image upload successfull",Toast.LENGTH_LONG).show();
+                        ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            @Override
+                            public void onSuccess(Uri uri) {
+
+                                String imageUrl = String.valueOf(uri);
+
+                                ActiviteColoneContent activiteColoneContent = new ActiviteColoneContent(libelle, type, date, imageUrl);
+                                activiteRef.child("activites").child("1").child("" + countActivites++).setValue(activiteColoneContent);
+
+                                Toast.makeText(ActivitesActivity.this, "Image upload successfull", Toast.LENGTH_LONG).show();
+
+                            }
+                        });
+
                     }
                 })
+
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception exception) {
                         // Handle unsuccessful uploads
-                        // ...
+                        Toast.makeText(ActivitesActivity.this, "Image upload faillure", Toast.LENGTH_LONG).show();
                     }
                 });
+
+        Toast.makeText(ActivitesActivity.this, "Activites Added", Toast.LENGTH_LONG).show();
     }
+
 
     private void pickImageFromGallery() {
         Intent intent = new Intent(Intent.ACTION_PICK);
@@ -171,4 +187,6 @@ public class ActivitesActivity extends AppCompatActivity {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
+
+
 }

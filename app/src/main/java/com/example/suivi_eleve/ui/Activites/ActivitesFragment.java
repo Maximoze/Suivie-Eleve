@@ -18,11 +18,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.suivi_eleve.R;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -33,49 +35,41 @@ public class ActivitesFragment extends Fragment {
     private ActivitesViewModel activitesViewModel;
 
     RecyclerView mRecyclerView;
-    ActivitesAdapter activitesAdapter;
+    DatabaseReference mReference;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         activitesViewModel =
                 ViewModelProviders.of(this).get(ActivitesViewModel.class);
         View root = inflater.inflate(R.layout.fragment_activites, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        final TextView libellecontent = root.findViewById(R.id.libelecontent);
         mRecyclerView = root.findViewById(R.id.recyclerView);
 
-        /*activitesViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });*/
+        mReference = FirebaseDatabase.getInstance().getReference().child("activites").child("1");
+        mReference.keepSynced(true);
 
+        mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        activitesAdapter = new ActivitesAdapter(ActivitesFragment.this, getMylist());
-        mRecyclerView.setAdapter(activitesAdapter);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
         return root;
     }
 
-    private ArrayList<Model_Activites> getMylist() {
+    @Override
+    public void onStart() {
+        super.onStart();
+        FirebaseRecyclerAdapter<Model_Activites,Activies_Holder>firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Model_Activites, Activies_Holder>
+                (Model_Activites.class,R.layout.row,Activies_Holder.class,mReference) {
+            @Override
+            protected void populateViewHolder(Activies_Holder activies_holder, Model_Activites model_activites, int i) {
+                Picasso.with(getActivity()).load(model_activites.getimageUrl()).into(activies_holder.imageUrl);
+                activies_holder.libelle.setText(model_activites.getLibelle());
+                activies_holder.type.setText(model_activites.getType());
+                activies_holder.date.setText(model_activites.getDate());
+            }
+        };
 
-        ArrayList<Model_Activites> models = new ArrayList<>();
-
-        Model_Activites m = new Model_Activites();
-        m.setLibelle("Frist Test");
-        m.setDate_limite("16 Mai 1996");
-        m.setImageActivites(R.drawable.activite);
-        models.add(m);
-
-        m = new Model_Activites();
-        m.setLibelle("Frist Test");
-        m.setDate_limite("16 Mai 1996");
-        m.setImageActivites(R.drawable.activite);
-        models.add(m);
-
-        return models;
+        mRecyclerView.setAdapter(firebaseRecyclerAdapter);
 
     }
+
 }

@@ -1,17 +1,28 @@
 package com.example.suivi_eleve;
 
+import java.util.HashMap;
+
 public class ActiviteColoneContent  {
 
     public String libelle;
     public String type;
     public String date;
+    String ImageUrl;
 
-    public ActiviteColoneContent(String libelle, String type, String date){
+    public ActiviteColoneContent(String libelle, String type, String date, String ImageUrl){
         this.libelle = libelle;
         this.type = type;
         this.date = date;
+        this.ImageUrl = ImageUrl;
     }
 
+    public String getImageUrl() {
+        return ImageUrl;
+    }
+
+    public void setImageUrl(String ImageUrl) {
+        this.ImageUrl = ImageUrl;
+    }
 
     public void setLibelle(String libelle) {
         this.libelle = libelle;
