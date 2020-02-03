@@ -11,7 +11,7 @@ public class PhotoViewModel extends ViewModel {
 
     public PhotoViewModel(){
         mText = new MutableLiveData<>();
-        mText.setValue("Partie Photos");
+        mText.setValue("Photos");
     }
 
     public LiveData<String> getText() {

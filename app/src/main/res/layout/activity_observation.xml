@@ -9,40 +9,26 @@
 
     <TextView
         android:id="@+id/text_ajout_observation"
-        android:layout_width="321dp"
-        android:layout_height="95dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
+        android:layout_width="191dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="45dp"
-        android:drawableStart="@drawable/observation"
-        android:gravity="left|center_vertical"
+        android:layout_marginEnd="76dp"
         android:text="@string/title_observations"
         android:textColor="@color/c3"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.838"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/divider_observation"
         android:layout_width="180dp"
         android:layout_height="1dp"
-        android:layout_below="@+id/text_ajout_observation"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="false"
+        android:layout_marginEnd="4dp"
         android:background="@color/c3"
-        android:foregroundGravity="center"
-        app:layout_constraintBottom_toBottomOf="@+id/text_ajout_observation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.363"
-        app:layout_constraintStart_toStartOf="@+id/text_ajout_observation"
-        app:layout_constraintTop_toTopOf="@+id/text_ajout_observation"
-        app:layout_constraintVertical_bias="1.0" />
-
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_ajout_observation" />
 
     <RelativeLayout
         android:id="@+id/evenement_formulaire_contenair"
@@ -60,22 +46,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_ajout_observation">
 
-
         <TextView
             android:id="@+id/eleve"
             android:layout_width="68dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="73dp"
-            android:text="@string/eleve" />
-
-        //type
-
-
-        //Note
-
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="68dp"
+            android:text="@string/eleve"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/contenu_eleve"
@@ -90,7 +70,7 @@
             android:layout_toEndOf="@+id/eleve"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/eleve" />
+            android:autofillHints="@string/eleve"/>
 
         <TextView
             android:id="@+id/typeO"
@@ -100,7 +80,8 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="25dp"
             android:layout_marginTop="85dp"
-            android:text="@string/Type" />
+            android:text="@string/Type"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/contenu_type"
@@ -116,7 +97,7 @@
             android:layout_toEndOf="@+id/typeO"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/type" />
+            android:autofillHints="@string/type"/>
 
         <TextView
             android:id="@+id/note"
@@ -126,7 +107,8 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="25dp"
             android:layout_marginTop="84dp"
-            android:text="@string/Note" />
+            android:text="@string/Note"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/contenu_note"
@@ -140,7 +122,7 @@
             android:layout_toEndOf="@+id/note"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/Note" />
+            android:autofillHints="@string/Note"/>
 
 
     </RelativeLayout>
@@ -150,24 +132,17 @@
         android:id="@+id/boutonobservation"
         android:layout_width="218dp"
         android:layout_height="48dp"
-        android:layout_below="@+id/evenement_formulaire_contenair"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="89dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="104dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="89dp"
         android:background="@drawable/roud_background"
         android:gravity="center"
-        android:text="envoyer"
+        android:text="@string/Obeservation_buttionenvoyer"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/evenement_formulaire_contenair"
-        app:layout_constraintVertical_bias="0.27" />
+        app:layout_constraintTop_toBottomOf="@+id/evenement_formulaire_contenair" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
