@@ -6,13 +6,169 @@
     android:layout_height="match_parent"
     tools:context=".ObservationActivity">
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="observation"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+    <TextView
+        android:id="@+id/text_ajout_observation"
+        android:layout_width="321dp"
+        android:layout_height="95dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="45dp"
+        android:drawableStart="@drawable/observation"
+        android:gravity="left|center_vertical"
+        android:text="@string/title_observations"
+        android:textColor="@color/c3"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.838"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider_observation"
+        android:layout_width="180dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/text_ajout_observation"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="false"
+        android:background="@color/c3"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/text_ajout_observation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintStart_toStartOf="@+id/text_ajout_observation"
+        app:layout_constraintTop_toTopOf="@+id/text_ajout_observation"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <RelativeLayout
+        android:id="@+id/evenement_formulaire_contenair"
+        android:layout_width="325dp"
+        android:layout_height="416dp"
+        android:layout_below="@+id/divider_observation"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="11dp"
+        android:background="@drawable/roud_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_ajout_observation">
+
+
+        <TextView
+            android:id="@+id/eleve"
+            android:layout_width="68dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="73dp"
+            android:text="@string/eleve" />
+
+        //type
+
+
+        //Note
+
+
+        <EditText
+            android:id="@+id/contenu_eleve"
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="53dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="63dp"
+            android:layout_toEndOf="@+id/eleve"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/eleve" />
+
+        <TextView
+            android:id="@+id/typeO"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/eleve"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="85dp"
+            android:text="@string/Type" />
+
+        <EditText
+            android:id="@+id/contenu_type"
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/contenu_note"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="161dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="54dp"
+            android:layout_toEndOf="@+id/typeO"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/type" />
+
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/typeO"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="84dp"
+            android:text="@string/Note" />
+
+        <EditText
+            android:id="@+id/contenu_note"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="105dp"
+            android:layout_toEndOf="@+id/note"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/Note" />
+
+
+    </RelativeLayout>
+
+    <Button
+
+        android:id="@+id/boutonobservation"
+        android:layout_width="218dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/evenement_formulaire_contenair"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/roud_background"
+        android:gravity="center"
+        android:text="envoyer"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/evenement_formulaire_contenair"
+        app:layout_constraintVertical_bias="0.27" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

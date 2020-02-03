@@ -28,8 +28,35 @@
     <string name="title_date_ajout_activite">Donner la date limite</string>
     <string name="description_addImageButton">boutton pour ajouter une image</string>
     <string name="Description_imageadded">Affichage image choisie</string>
+<<<<<<< HEAD
     <string name="Libellé_content">Libellé content</string>
     <string name="Desc_Image_activity">Image activity</string>
     <string name="Type_content">Type content</string>
     <string name="Date_content">Date content</string>
+=======
+
+
+
+    <string name="title_creer_un_evenement">Créer un evenement</string>
+    <string name="date_limite_evenement">Date limite_ev</string>
+    <string name="title_hint_type_ajout_evenement">Type de l\'evenement</string>
+    <string name="title_hint_type_ajout_libele">libele</string>
+    <string name="title_hint_type_ajout_description">description</string>
+    <string name="title_hint_type_ajout_heure">heure</string>
+    <string name="title_hint_type_ajout_lieu">lieu</string>
+    <string name="title_hint_type_ajout_cotisation">cotisation</string>
+
+
+    <string name="title_faire_lappel">RAPPEL</string>
+    <string name="Eleve">eleve</string>
+    <string name="eleve">eleve</string>
+    <string name="Type">Type</string>
+    <string name="type">type</string>
+    <string name="note">Note</string>
+    <string name="Note">Note</string>
+    <string name="envoyer">envoyer</string>
+    <string name="Tableau_de_bord">Tableau de bord</string>
+    <string name="Ajouter">Ajouter</string>
+
+>>>>>>> 8348b0ea44cfb09876f16351e65d4a97174667ae
 </resources>
