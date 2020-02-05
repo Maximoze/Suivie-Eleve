@@ -6,6 +6,7 @@
     <string name="title_activites">Activité</string>
     <string name="title_observations">Observations</string>
     <string name="title_evenements">Evenements</string>
+    <string name="title_evenements_scolaire">Evenements Scolaire</string>
     <string name="title_chat">Chat </string>
     <string name="title_photos">Photos</string>
     <string name="titleActiviteAFaire">Activité à Faire</string>
@@ -18,6 +19,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="your_string"><u>Tableau de bord</u></string>
     <string name="libele_activite">Libellé</string>
+
     <string name="type_activites">Type</string>
     <string name="date_limite">Date limite</string>
     <string name="title_creer_une_activite">Créer une activité</string>
@@ -42,6 +44,26 @@
     <string name="title_hint_type_ajout_heure">heure</string>
     <string name="title_hint_type_ajout_lieu">lieu</string>
     <string name="title_hint_type_ajout_cotisation">cotisation</string>
+
+    <string name="libele_evenement">Libellé</string>
+    <string name="nom_evenement">nom</string>
+    <string name="date_limite_eve">Date limite</string>
+    <string name="description_evenement">description</string>
+    <string name="heure_evenenemnt">heure</string>
+    <string name="lieu_evevenement">lieu</string>
+    <string name="cotisation_evenement">cotisation</string>
+    <string name="type_evenement">type</string>
+
+
+    <string name="Type_content_ev">Type-ev content</string>
+    <string name="Date_content_ev">Date_ev content</string>
+
+    <string name="nom_content_ev">nom content </string>
+
+    <string name="description_content_ev">description content</string>
+    <string name="heure_content_ev">heure content</string>
+    <string name="lieu_content_ev">lieu content</string>
+    <string name="cotisation_content_ev">cotisation content</string>
 
 
     <string name="title_faire_lappel">RAPPEL</string>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+
+    <RelativeLayout
+        android:layout_width="402dp"
+        android:layout_height="362dp"
+        android:background="@drawable/bordure"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/nom_evenement"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageActivite"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/libele_evenement"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/typeevenenent"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nom_evenement"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/type_evenement"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/descriptionevenenent"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/typeevenenent"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="43dp"
+            android:text="@string/description_evenement"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/heureevenenent"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descriptionevenenent"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-24dp"
+            android:layout_marginBottom="43dp"
+            android:text="@string/heure_evenenemnt"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dateevenenent"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heureevenenent"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-24dp"
+            android:layout_marginBottom="43dp"
+            android:text="@string/date_limite_eve"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/lieuevenenent"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dateevenenent"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-24dp"
+            android:layout_marginBottom="43dp"
+            android:text="@string/lieu_evevenement"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/cotisationevenenent"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lieuevenenent"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-24dp"
+            android:text="@string/cotisation_evenement"
+            android:textSize="18sp" />
+
+
+        //
+
+
+        <TextView
+            android:id="@+id/nomcontent_ev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageActivite"
+            android:layout_marginStart="67dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="342dp"
+            android:layout_toEndOf="@+id/nom_evenement"
+            android:text="@string/nom_content_ev"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/typecontent_ev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nom_evenement"
+            android:layout_marginStart="67dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="342dp"
+            android:layout_toEndOf="@+id/nom_evenement"
+            android:text="@string/Type_content_ev"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/descriptioncontent_ev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/typeevenenent"
+            android:layout_marginStart="67dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="342dp"
+            android:layout_toEndOf="@+id/typeevenenent"
+            android:text="@string/description_content_ev"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/heurecontent_ev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descriptionevenenent"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="-24dp"
+            android:layout_marginBottom="342dp"
+            android:text="@string/heure_content_ev"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/datecontent_ev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heureevenenent"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="-24dp"
+            android:layout_marginBottom="342dp"
+            android:text="@string/Date_content_ev"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/lieucontent_ev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dateevenenent"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="-24dp"
+            android:layout_marginBottom="342dp"
+            android:text="@string/lieu_content_ev"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/cotisationcontent_ev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lieuevenenent"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="-24dp"
+            android:layout_marginBottom="342dp"
+            android:text="@string/cotisation_content_ev"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

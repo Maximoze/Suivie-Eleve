@@ -1,17 +1,12 @@
 package com.example.suivi_eleve.ui.Activites;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -19,16 +14,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.suivi_eleve.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
-
-import java.util.ArrayList;
-
-import static android.content.ContentValues.TAG;
 
 public class ActivitesFragment extends Fragment {
 
@@ -58,7 +46,7 @@ public class ActivitesFragment extends Fragment {
     public void onStart() {
         super.onStart();
         FirebaseRecyclerAdapter<Model_Activites,Activies_Holder>firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Model_Activites, Activies_Holder>
-                (Model_Activites.class,R.layout.row,Activies_Holder.class,mReference) {
+                (Model_Activites.class,R.layout.row_activites,Activies_Holder.class,mReference) {
             @Override
             protected void populateViewHolder(Activies_Holder activies_holder, Model_Activites model_activites, int i) {
                 Picasso.with(getActivity()).load(model_activites.getimageUrl()).into(activies_holder.imageUrl);

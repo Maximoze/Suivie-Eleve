@@ -38,7 +38,7 @@ public class EvenementActivity extends AppCompatActivity {
     DatabaseReference activiteRef;
     DatabaseReference countActivitesRef;
 
-    String libelle, type, desc, lieu, heure, date, cotisation;
+    String libelle, type, description, lieu, heure, date, cotisation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,12 +88,12 @@ public class EvenementActivity extends AppCompatActivity {
         libelle = libelle_evenement.getText().toString();
         type = type_evenement.getText().toString();
         date = date_evenement.getText().toString();
-        desc = description_evenement.getText().toString();
+        description = description_evenement.getText().toString();
         heure = heur_evenement.getText().toString();
         lieu = lieu_evenement.getText().toString();
         cotisation = cotisation_evenement.getText().toString();
 
-        EvennementColoneContent EvennementColoneContent = new EvennementColoneContent(libelle, type, desc, heure, date, lieu, cotisation);
+        EvennementColoneContent EvennementColoneContent = new EvennementColoneContent(libelle, type, description, heure, date, lieu, cotisation);
         activiteRef.child("evennementscolaire").child("1").child("" + countActivites++).setValue(EvennementColoneContent);
 
         Toast.makeText(EvenementActivity.this, "Evennement Added", Toast.LENGTH_LONG).show();
