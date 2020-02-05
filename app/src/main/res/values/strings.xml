@@ -79,5 +79,12 @@
     <string name="Obeservation_buttionenvoyer">Envoyer</string>
     <string name="title_Rappel">Faire l\'appel</string>
     <string name="title_Activites">Activités</string>
+    <string name="title_mot_de_passe_oublie">Mot de passe oublé ?</string>
+    <string name="title_username">Nom d\'utilisateur</string>
+    <string name="title_password">Mot de passe</string>
+    <string name="title_connexion">Connexion</string>
+    <string name="title_je_suis">Etes-vous un ?</string>
+    <string name="title_eleve_present">Présent</string>
+    <string name="title_eleve_absent">Absent</string>
 
 </resources>

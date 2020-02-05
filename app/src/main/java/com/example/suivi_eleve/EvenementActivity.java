@@ -57,7 +57,7 @@ public class EvenementActivity extends AppCompatActivity {
         activiteRef = FirebaseDatabase.getInstance().getReference();
         countActivitesRef = FirebaseDatabase.getInstance().getReference().child("evennementscolaire").child("1");
 
-        // exemple RappelActivity n'est pas valide
+        // exemple RappelParent n'est pas valide
 
 
         countActivitesRef.addValueEventListener(new ValueEventListener() {
