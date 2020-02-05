@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.suivi_eleve">
-
-<!--    Permission for pick an image from gallery-->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- Permission for pick an image from gallery -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -12,11 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfilParentActivity"></activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".ProfilParentActivity" />
         <activity android:name=".EvenementActivity" />
         <activity android:name=".ActivitesActivity" />
         <activity android:name=".ObservationActivity" />
-        <activity android:name=".RappelActivity" />
+        <activity android:name=".Rappel.RappelParent" />
         <activity
             android:name=".ParentAcceuilActivity"
             android:label="@string/title_activity_parent_acceuil" />

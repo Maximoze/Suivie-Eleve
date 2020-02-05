@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.suivi_eleve.Rappel.RappelParent;
+
 public class EnseignantDashbordActivity extends AppCompatActivity {
 
     @Override
@@ -51,7 +53,7 @@ public class EnseignantDashbordActivity extends AppCompatActivity {
         rappel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent  Intentactivite =  new Intent(EnseignantDashbordActivity.this, RappelActivity.class);
+                Intent  Intentactivite =  new Intent(EnseignantDashbordActivity.this, RappelParent.class);
                 startActivity(Intentactivite);
             }
 
