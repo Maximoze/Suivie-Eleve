@@ -101,7 +101,6 @@ public class ActivitesActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
                 writeNewActivity();
 
 

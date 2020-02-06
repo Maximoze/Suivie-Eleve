@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.suivi_eleve.ProfilEnseignant.ProfilEnseignantActivity;
 import com.example.suivi_eleve.Rappel.RappelParent;
 
 public class EnseignantDashbordActivity extends AppCompatActivity {
@@ -40,6 +41,17 @@ public class EnseignantDashbordActivity extends AppCompatActivity {
 
         /** Rappel a faire*/
         ImageButton rappel = (ImageButton) findViewById(R.id.rappel);
+
+        ImageButton profil = (ImageButton) findViewById(R.id.profile);
+
+        profil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent  Intentprofil =  new Intent(EnseignantDashbordActivity.this, ProfilEnseignantActivity.class);
+                startActivity(Intentprofil);
+            }
+
+        });
 
         activite.setOnClickListener(new View.OnClickListener() {
             @Override

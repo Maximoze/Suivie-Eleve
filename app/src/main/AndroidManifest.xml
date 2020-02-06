@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".ProfilParentActivity" />
+        <activity android:name=".ProfilParent.ProfilParentActivity" />
+        <activity android:name=".ProfilEnseignant.ProfilEnseignantActivity" />
         <activity android:name=".EvenementActivity" />
         <activity android:name=".ActivitesActivity" />
         <activity android:name=".ObservationActivity" />
