@@ -86,9 +86,29 @@
     <string name="title_je_suis">Etes-vous un ?</string>
     <string name="title_eleve_present">Présent</string>
     <string name="title_eleve_absent">Absent</string>
+<<<<<<< HEAD
     <string name="Title_Nouvelle_observaion">Nouvelle observaion</string>
     <string name="title_NOte_Observation">Note</string>
     <string name="Eeve_observation">Elève                             </string>
     <string name="choisir_eleve">Choisir</string>
+=======
+    <string name="Deconnexion">Deconnexion</string>
+
+
+    <string name="nom_profil">Nom</string>
+    <string name="prenom_profil">prenom</string>
+    <string name="adresse_profil">Adresse</string>
+    <string name="tel_profil">Telephone</string>
+    <string name="email_profil">Email</string>
+    <string name="mdp_profil">mdp</string>
+
+    <string name="conten_nom_profil">conten_nom</string>
+    <string name="conten_prenom_profil">conten_prenom</string>
+    <string name="conten_adresse_profil">conten_adresse</string>
+    <string name="conten_tel_profil">conten_tel</string>
+    <string name="conten_email_profil">conten_email</string>
+    <string name="conten_mdp_profil">conten_mdp</string>
+
+>>>>>>> 123c8feca0f3b6cb045d5d035ce786e8c71dc915
 
 </resources>
