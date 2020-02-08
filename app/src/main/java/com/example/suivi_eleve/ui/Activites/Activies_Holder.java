@@ -20,7 +20,6 @@ public class Activies_Holder extends RecyclerView.ViewHolder {
     public Activies_Holder(@NonNull View itemView) {
         super(itemView);
         this.date = itemView.findViewById(R.id.datecontent);
-
         this.libelle = itemView.findViewById(R.id.libelecontent);
         this.type = itemView.findViewById(R.id.typecontent);
         this.imageUrl = itemView.findViewById(R.id.imageActivite);

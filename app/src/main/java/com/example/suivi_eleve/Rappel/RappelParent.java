@@ -6,86 +6,111 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
-import com.bignerdranch.expandablerecyclerview.Model.ParentObject;
 import com.example.suivi_eleve.R;
-import com.example.suivi_eleve.RappelAdapter.MyAdapter;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
-public class RappelParent extends AppCompatActivity implements ParentObject {
+public class RappelParent extends AppCompatActivity {
 
-    private List<Object> mChildrenList;
-    private UUID _id;
-    private String title;
+    private FirebaseAuth mAuth;
+    FirebaseUser user;
     RecyclerView recyclerView;
-
-    @Override
-    protected void onSaveInstanceState(@NonNull Bundle outState) {
-        super.onSaveInstanceState(outState);
-        ((MyAdapter)recyclerView.getAdapter()).onSaveInstanceState(outState);
-    }
+    DatabaseReference ref;
+    List<Rappel> rappelList = new ArrayList();
+    String nom[] = new String[10000];
+    List<Eleve> list;
+    long classe;
+    Rappel rappel;
+    Eleve eleve;
+    int i=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rappel);
 
-        recyclerView = findViewById(R.id.rappelRecyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager((this)));
+        recyclerView = findViewById(R.id.recyclerView);
+        mAuth = FirebaseAuth.getInstance();
 
-        MyAdapter adapter = new MyAdapter(this,initData());
-        adapter.setParentClickableViewAnimationDefaultDuration();
-        adapter.setParentAndIconExpandOnClick(true);
-
-        recyclerView.setAdapter(adapter);
-    }
-
-    private  List<ParentObject>initData(){
-        RappelCreator rappelCreator = RappelCreator.get(this);
-        List<RappelParent> rappelParents = rappelCreator.getAll();
-        List<ParentObject> parentObjects = new ArrayList<>();
-        for (RappelParent rappelParents1 : rappelParents){
-            List<Object> childList = new ArrayList<>();
-            childList.add(new RappelChild("Present","Absent"));
-            rappelParents1.setChildObjectList(childList);
-            parentObjects.add(rappelParents1);
-        }
-        return parentObjects;
+        initData();
+        initRecyclerView();
     }
 
 
-    @Override
-    public List<Object> getChildObjectList() {
-        return mChildrenList;
+    private void initRecyclerView() {
+        RappelAdapter rappelAdapter = new RappelAdapter(rappelList);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(rappelAdapter);
     }
 
-    @Override
-    public void setChildObjectList(List<Object> list) {
+    private void initData() {
+        ref = FirebaseDatabase.getInstance().getReference();
+        ref.keepSynced(true);
+        user = mAuth.getCurrentUser();
 
-        mChildrenList = list;
+        list = new ArrayList();
+        String myUserId = user.getUid();
+        //Query myTopPostsQuery = ref.child("Enseignant_classes_attendees").child(myUserId).child("id_classes");
+
+        //Log.d("RappelParent",myUserId);
+
+        // Read from the database
+        ref.child("enseignantClasseAttendees").child(myUserId).child("idClasse").addValueEventListener(new ValueEventListener() {
+            @Override
+
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                classe = dataSnapshot.getValue(long.class);
+                Log.d("Classe", "Value is: " + classe);
+                Toast.makeText(RappelParent.this,"Classe Récuperer"+classe,Toast.LENGTH_SHORT);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w("RappelParent", "Failed to read value.", error.toException());
+                Toast.makeText(RappelParent.this,"Recuperation Id faillure",Toast.LENGTH_SHORT);
+            }
+        });
+
+
+        ref.child("eleves").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                for (DataSnapshot child : dataSnapshot.getChildren()) {
+                    if (dataSnapshot.hasChildren()) {
+                        // TODO: handle the post
+                        rappel = child.getValue(Rappel.class);
+                        if (rappel.getClasse() == classe) {
+                            rappelList.add(new Rappel(rappel.getnom(), rappel.getId(), rappel.classe));
+                            Log.d("List", "Eleve Recuperer" + rappel);
+                        }
+                    }
+
+                    Toast.makeText(RappelParent.this, "Recuperation Eleve effectué", Toast.LENGTH_SHORT);
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(RappelParent.this,"Recuperation Eleve faillure",Toast.LENGTH_SHORT);
+                Log.w("RappelParent", "Failed to read value.", databaseError.toException());
+            }
+        });
+
     }
 
-    public RappelParent(String title){
-        this.title = title;
-        _id = UUID.randomUUID();
-    }
 
-    public UUID get_id() {
-        return _id;
-    }
-
-    public void set_id(UUID _id) {
-        this._id = _id;
-    }
-
-    public String getTittle(){
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
 }

@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.suivi_eleve.ObservationsEnseignant.AjoutObservationsActivity;
 import com.example.suivi_eleve.Rappel.RappelParent;
 
 public class EnseignantDashbordActivity extends AppCompatActivity {
@@ -71,7 +72,7 @@ public class EnseignantDashbordActivity extends AppCompatActivity {
         observation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent  Intentactivite =  new Intent(EnseignantDashbordActivity.this, ObservationActivity.class);
+                Intent  Intentactivite =  new Intent(EnseignantDashbordActivity.this, AjoutObservationsActivity.class);
                 startActivity(Intentactivite);
             }
 

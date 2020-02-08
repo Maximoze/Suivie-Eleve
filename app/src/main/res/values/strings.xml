@@ -68,7 +68,7 @@
 
     <string name="title_faire_lappel">RAPPEL</string>
     <string name="Eleve">eleve</string>
-    <string name="eleve">Eleve</string>
+    <string name="eleve">Elève</string>
     <string name="Type">Type</string>
     <string name="type">type</string>
     <string name="note">Note</string>
@@ -86,5 +86,8 @@
     <string name="title_je_suis">Etes-vous un ?</string>
     <string name="title_eleve_present">Présent</string>
     <string name="title_eleve_absent">Absent</string>
+    <string name="Title_Nouvelle_observaion">Nouvelle observaion</string>
+    <string name="title_NOte_Observation">Note</string>
+    <string name="Eeve_observation">Elève                             </string>
 
 </resources>

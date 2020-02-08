@@ -33,7 +33,6 @@ public class EvenementsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-<<<<<<< HEAD
         evenementsViewModel =
                 ViewModelProviders.of(this).get(EvenementsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_evenements, container, false);
@@ -70,11 +69,7 @@ public class EvenementsFragment extends Fragment {
 
         mRecyclerView_evenement.setAdapter(firebaseRecyclerAdapter);
 
-=======
-        View root = inflater.inflate(R.layout.fragment_evenements, container, false);
 
-        return root;
->>>>>>> 2596ded458dbc5d1f911c93c3ece828bd0430443
     }
 
 }
