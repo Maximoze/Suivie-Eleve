@@ -8,20 +8,21 @@
 
     <TextView
         android:id="@+id/text_home"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
+        android:layout_width="391dp"
+        android:layout_height="54dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
+        android:layout_centerHorizontal="false"
         android:layout_marginStart="17dp"
         android:layout_marginTop="23dp"
-        android:layout_marginEnd="26dp"
+        android:layout_marginEnd="3dp"
         android:drawableStart="@drawable/evenement"
+        android:gravity="center"
         android:text="@string/title_evenements_scolaire"
         android:textAlignment="textStart"
         android:textColor="@color/c3"
-        android:textSize="24sp" />
+        android:textSize="18sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_evenement"

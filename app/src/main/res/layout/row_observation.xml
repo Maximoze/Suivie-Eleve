@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="@drawable/bordure"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/Nom_eleve"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageActivite"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/eleve"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/typeobservation"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Nom_eleve"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/type_evenement"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/noteObservation"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/typeobservation"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/Note"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/nomcontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageActivite"
+            android:layout_marginStart="67dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="342dp"
+            android:layout_toEndOf="@+id/Nom_eleve"
+            android:text="@string/nom_content_ev"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/typecontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Nom_eleve"
+            android:layout_marginStart="67dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="342dp"
+            android:layout_toEndOf="@+id/Nom_eleve"
+            android:text="@string/Type_content_ev"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/datecontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginBottom="1dp"
+            android:text="@string/Date_content_ev"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/notecontent"
+            android:layout_width="204dp"
+            android:layout_height="160dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="3dp"
+            android:text="@string/Note"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

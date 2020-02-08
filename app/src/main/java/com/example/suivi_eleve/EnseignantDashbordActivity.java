@@ -10,11 +10,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-<<<<<<< HEAD
+
 import com.example.suivi_eleve.ObservationsEnseignant.AjoutObservationsActivity;
-=======
+
 import com.example.suivi_eleve.ProfilEnseignant.ProfilEnseignantActivity;
->>>>>>> 123c8feca0f3b6cb045d5d035ce786e8c71dc915
+
 import com.example.suivi_eleve.Rappel.RappelParent;
 
 public class EnseignantDashbordActivity extends AppCompatActivity {
