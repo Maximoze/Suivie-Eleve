@@ -89,5 +89,6 @@
     <string name="Title_Nouvelle_observaion">Nouvelle observaion</string>
     <string name="title_NOte_Observation">Note</string>
     <string name="Eeve_observation">Elève                             </string>
+    <string name="choisir_eleve">Choisir</string>
 
 </resources>
