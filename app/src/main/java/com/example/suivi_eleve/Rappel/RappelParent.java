@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import com.example.suivi_eleve.ObservationsEnseignant.AjoutObservationsActivity;
 import com.example.suivi_eleve.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -45,7 +44,6 @@ public class RappelParent extends AppCompatActivity implements View.OnClickListe
     List<RecupAbsent> recupAbsents;
     List<Absent> absents;
 
-    FloatingActionButton floatingActionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,11 +51,8 @@ public class RappelParent extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_rappel);
 
         recyclerView = findViewById(R.id.recyclerView);
-        floatingActionButton = findViewById(R.id.Valider);
         mAuth = FirebaseAuth.getInstance();
         this.recupAbsents = new ArrayList<>();
-
-        floatingActionButton.setOnClickListener(this);
 
         initData();
         initRecyclerView();
@@ -114,7 +109,7 @@ public class RappelParent extends AppCompatActivity implements View.OnClickListe
                         rappel = child.getValue(Rappel.class);
                         if (rappel.getClasse() == classe) {
                             rappelList.add(new Rappel(rappel.getnom(), rappel.getId(), rappel.classe));
-                            Log.d("List", "Eleve Recuperer" + rappel);
+                            Log.d("ListE", "Eleve Recuperer" + rappel);
                         }
                     }
 

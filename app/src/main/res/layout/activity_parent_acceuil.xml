@@ -50,6 +50,24 @@
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/menu_drawer">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="467dp">
+
+            <include
+                android:id="@+id/header"
+                layout="@layout/nav_header"
+                android:layout_width="match_parent"
+                android:layout_height="462dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/eleveListRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/header"
+                android:layout_marginTop="-188dp"
+                android:layout_marginBottom="0dp" />
+        </RelativeLayout>
     </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>

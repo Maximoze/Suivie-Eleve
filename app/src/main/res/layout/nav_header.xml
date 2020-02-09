@@ -2,57 +2,68 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="270dp"
-    android:background="@color/colorAccent"
-    android:gravity="bottom"
+    android:layout_height="500dp"
+
     android:orientation="vertical"
-    android:padding="16dp"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark"
     >
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="254dp"
-        android:layout_height="243dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="-7dp"
-        app:srcCompat="@drawable/school" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/element"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <ImageButton
-        android:id="@+id/profilButton"
-        android:layout_width="95dp"
-        android:layout_height="77dp"
-        android:layout_above="@+id/username"
-        android:layout_alignParentStart="false"
-        android:layout_marginStart="-1dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/profil" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="254dp"
+            android:layout_height="243dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="-7dp"
+            app:srcCompat="@drawable/school" />
 
-    <TextView
-        android:id="@+id/username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/mailtext"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="10dp"
-        android:text="Username"
-        android:textColor="@color/cardview_light_background"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        <ImageButton
+            android:id="@+id/profilButton"
+            android:layout_width="95dp"
+            android:layout_height="77dp"
+            android:layout_above="@+id/username"
+            android:layout_alignParentStart="false"
+            android:layout_marginStart="-1dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/profil" />
 
-    <TextView
-        android:id="@+id/mailtext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="15dp"
-        android:textColor="@color/cardview_light_background"
-        android:text="Username@email.com" />
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/mailtext"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="Username"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/cardview_light_background" />
+
+        <TextView
+            android:id="@+id/mailtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="15dp"
+            android:text="Username@email.com"
+            android:textColor="@color/cardview_light_background" />
+    </RelativeLayout>
+
+
+
+
 </RelativeLayout>

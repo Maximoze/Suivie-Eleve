@@ -2,16 +2,25 @@ package com.example.suivi_eleve.ui.Activites;
 
 public class Model_Activites {
 
-    private String libelle, type, date;
+    private String libelle, type, date, classe;
     private String imageUrl;
 
 
 
-    public Model_Activites(String libelle, String type, String date, String imageUrl) {
+    public Model_Activites(String libelle, String type, String date, String imageUrl, String classe) {
         this.libelle = libelle;
         this.type = type;
         this.date = date;
         this.imageUrl = imageUrl;
+        this.classe = classe;
+    }
+
+    public String getClasse() {
+        return classe;
+    }
+
+    public void setClasse(String classe) {
+        this.classe = classe;
     }
 
     public String getLibelle() {
