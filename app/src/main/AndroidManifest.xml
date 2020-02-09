@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity"></activity>
+
+        <activity android:name=".ObservationsEnseignant.AjoutObservationsActivity"></activity>
+        <activity android:name=".LoginActivity" />
         <activity android:name=".ProfilParent.ProfilParentActivity" />
         <activity android:name=".ProfilEnseignant.ProfilEnseignantActivity" />
         <activity android:name=".EvenementActivity" />
@@ -40,6 +42,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
     </application>
 
 </manifest>
