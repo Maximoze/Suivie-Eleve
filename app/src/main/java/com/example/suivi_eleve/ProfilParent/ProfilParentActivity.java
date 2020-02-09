@@ -3,14 +3,20 @@ package com.example.suivi_eleve.ProfilParent;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.suivi_eleve.ActivitesActivity;
 import com.example.suivi_eleve.LoginActivity;
+import com.example.suivi_eleve.MainActivity;
 import com.example.suivi_eleve.R;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -31,6 +37,7 @@ public class ProfilParentActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     Model_Parent parent;
 
+
     String nom, prenom, adresse, telephone, email, mot_de_passe;
 
     @Override
@@ -49,16 +56,26 @@ public class ProfilParentActivity extends AppCompatActivity {
 
         profil();
 
+
+
         deconnexion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent Intentprofil = new Intent(ProfilParentActivity.this, LoginActivity.class);
+                Intent Intentprofil = new Intent(ProfilParentActivity.this, MainActivity.class);
                 startActivity(Intentprofil);
-            }
 
+
+
+
+
+                }
         });
 
-    }
+
+        }
+
+
+
 
     private void profil() {
 

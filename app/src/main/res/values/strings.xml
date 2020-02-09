@@ -4,9 +4,13 @@
     <string name="buttonParent">Parent</string>
     <string name="title_activity_parent_acceuil">Suivie-Elève</string>
     <string name="title_activites">Activité</string>
+    <string name="title_publier">Publier</string>
+    <string name="title_des">Description</string>
+    <string name="title_detaille">Details de l évennement</string>
+
     <string name="title_observations">Observations</string>
     <string name="title_evenements">Evenements</string>
-    <string name="title_evenements_scolaire">Evenements Scolaire</string>
+    <string name="title_evenements_scolaire"> Evenements Scolaire</string>
     <string name="title_chat">Chat </string>
     <string name="title_photos">Photos</string>
     <string name="titleActiviteAFaire">Activité à Faire</string>

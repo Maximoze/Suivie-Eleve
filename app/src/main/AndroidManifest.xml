@@ -19,6 +19,8 @@
         <activity android:name=".EvenementActivity" />
         <activity android:name=".ActivitesActivity" />
         <activity android:name=".ObservationActivity" />
+        <activity android:name=".Publication" />
+        <activity android:name=".PublicationParent" />
         <activity android:name=".Rappel.RappelParent" />
         <activity
             android:name=".ParentAcceuilActivity"

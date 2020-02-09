@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Publication">
+
+
+    <TextView
+        android:id="@+id/text_home_publication"
+        android:layout_width="121dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:drawableRight="@drawable/publier"
+        android:text="@string/title_publier"
+        android:textAlignment="textStart"
+        android:textColor="@color/c3"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="176dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/text_home"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="64dp"
+        android:background="@color/c3"
+        app:layout_constraintBottom_toTopOf="@+id/activite_formulaire_contenair"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.983"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_home_publication"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <RelativeLayout
+        android:id="@+id/activite_formulaire_contenair"
+        android:layout_width="394dp"
+        android:layout_height="440dp"
+        android:layout_below="@+id/divider_activite"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="false"
+        android:layout_marginBottom="144dp"
+        android:background="@drawable/roud_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/ajoutImage_publication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/ajouter_image"
+            android:textColor="#004D40"
+            android:textSize="20sp" />
+
+
+        <ImageButton
+            android:id="@+id/addImagePublication"
+            android:layout_width="64dp"
+            android:layout_height="43dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="68dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/ajoutImage_publication"
+            android:background="@drawable/ic_add_image"
+            android:contentDescription="@string/description_addImageButton" />
+
+        <ImageView
+            android:id="@+id/imageadded"
+            android:layout_width="274dp"
+            android:layout_height="169dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="69dp"
+            android:layout_marginEnd="36dp"
+            android:background="@drawable/activite"
+            android:contentDescription="@string/Description_imageadded" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="07dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginBottom="103dp"
+            android:text="@string/title_des"
+            android:textSize="15sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+
+
+            android:layout_width="wrap_content"
+            android:layout_height="145dp"
+            android:layout_below="@+id/imageadded"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="99dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bordure"
+            android:textColorHint="#004D40"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Body1">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_ajout_libelle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textColorHint="#004D40" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/buttonValider"
+        android:layout_width="109dp"
+        android:layout_height="54dp"
+        android:layout_below="@+id/activite_formulaire_contenair"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/roud_background"
+        android:gravity="center"
+        android:text="@string/title_valider_creer_activite"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activite_formulaire_contenair" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

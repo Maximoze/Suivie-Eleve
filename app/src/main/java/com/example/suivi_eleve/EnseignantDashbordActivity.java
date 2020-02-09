@@ -92,5 +92,16 @@ public class EnseignantDashbordActivity extends AppCompatActivity {
             }
 
         });
+
+        publier.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent  Intentactivite =  new Intent(EnseignantDashbordActivity.this, Publication.class);
+                startActivity(Intentactivite);
+            }
+
+        });
+
+
     }
 }
