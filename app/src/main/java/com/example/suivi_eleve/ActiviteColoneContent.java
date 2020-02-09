@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class ActiviteColoneContent  {
 
+
     public String libelle;
     public String type;
     public String date;
@@ -14,6 +15,7 @@ public class ActiviteColoneContent  {
         this.type = type;
         this.date = date;
         this.ImageUrl = ImageUrl;
+
     }
 
     public String getImageUrl() {
@@ -47,4 +49,8 @@ public class ActiviteColoneContent  {
     public String getDate() {
         return date;
     }
+
+
+
+
 }

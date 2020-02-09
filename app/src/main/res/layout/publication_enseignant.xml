@@ -131,10 +131,10 @@
 
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text_ajout_libelle"
+                android:id="@+id/edit_text_ajout_photo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:hint="@string/title_des"
                 android:textColorHint="#004D40" />
         </com.google.android.material.textfield.TextInputLayout>
 

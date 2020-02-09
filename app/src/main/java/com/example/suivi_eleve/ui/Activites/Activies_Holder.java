@@ -14,6 +14,7 @@ import com.squareup.picasso.Picasso;
 
 public class Activies_Holder extends RecyclerView.ViewHolder {
 
+
     ImageView imageUrl;
     TextView  libelle,type,date;
 
