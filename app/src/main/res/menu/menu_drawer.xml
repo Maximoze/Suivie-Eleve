@@ -6,22 +6,7 @@
         <item android:id="@+id/profileparents"
             android:icon="@drawable/profil"
             android:title="Profil"/>
-
     </group>
-
-
-    <item android:title="Gestoin de de vos enfants">
-        <menu>
-            <item
-                android:id="@+id/eleve_1"
-                android:icon="@drawable/student_male"
-                android:title="Eleve 1" />
-            <item
-                android:id="@+id/eleve_2"
-                android:icon="@drawable/students_female"
-                android:title="Eleve 2" />
-        </menu>
-    </item>
 
     <item android:title="Communication">
         <menu>

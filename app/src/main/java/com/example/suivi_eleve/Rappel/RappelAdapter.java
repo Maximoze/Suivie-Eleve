@@ -1,6 +1,5 @@
 package com.example.suivi_eleve.Rappel;
 
-import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,8 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.suivi_eleve.MainActivity;
 import com.example.suivi_eleve.R;
+import com.example.suivi_eleve.itemClickListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -35,7 +34,7 @@ public class RappelAdapter extends RecyclerView.Adapter<RappelAdapter.MovieVH> {
     RecupAbsent recupAbsent;
     String formattedDate;
     RappelParent rappelParent;
-    //List<>
+    //ListE<>
 
     public RappelAdapter(List<Rappel> rappelList) {
         this.rappelList = rappelList;
@@ -89,7 +88,7 @@ public class RappelAdapter extends RecyclerView.Adapter<RappelAdapter.MovieVH> {
         List<RecupAbsent> recupAbsents;
         List<Absent> absents;
 
-        public void setItemClickListener(com.example.suivi_eleve.Rappel.itemClickListener itemClickListener) {
+        public void setItemClickListener(com.example.suivi_eleve.itemClickListener itemClickListener) {
             this.itemClickListener = itemClickListener;
         }
 

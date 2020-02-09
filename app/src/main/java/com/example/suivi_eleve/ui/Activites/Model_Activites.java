@@ -4,14 +4,23 @@ public class Model_Activites {
 
     private String libelle, type, date;
     private String imageUrl;
+    long  classe;
 
 
-
-    public Model_Activites(String libelle, String type, String date, String imageUrl) {
+    public Model_Activites(String libelle, String type, String date, String imageUrl, long classe) {
         this.libelle = libelle;
         this.type = type;
         this.date = date;
         this.imageUrl = imageUrl;
+        this.classe = classe;
+    }
+
+    public long getClasse() {
+        return classe;
+    }
+
+    public void setClasse(long classe) {
+        this.classe = classe;
     }
 
     public String getLibelle() {
@@ -42,9 +51,6 @@ public class Model_Activites {
         return imageUrl;
     }
 
-    public void tempImageName(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
 
     public Model_Activites() {
 
