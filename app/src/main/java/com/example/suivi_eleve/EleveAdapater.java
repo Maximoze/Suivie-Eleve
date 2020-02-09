@@ -78,21 +78,12 @@ public class EleveAdapater extends RecyclerView.Adapter<EleveAdapater.EleveVH> {
                 public void onClick(View view) {
                     Eleve rappel = rappelList.get(getAdapterPosition());
 
-                    Log.d("Botton click", "Eleve List  String     " +  rappel.getnom()+" "+ rappel.getId());
+                    Log.d("Botton click", "Eleve List  String     " + rappel.getnom() + " " + rappel.getId());
 
                 }
             });
 
         }
-
-        public void Retrieved(clickRecup clickRecup){
-
-        }
-
-    }
-
-    private interface clickRecup{
-        void retrieve();
 
     }
 }

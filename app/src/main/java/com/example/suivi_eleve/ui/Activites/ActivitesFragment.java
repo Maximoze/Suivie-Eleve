@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.suivi_eleve.EleveAdapater;
 import com.example.suivi_eleve.ListE;
 import com.example.suivi_eleve.ParentAcceuilActivity;
 import com.example.suivi_eleve.R;
@@ -38,11 +39,12 @@ public class ActivitesFragment extends Fragment {
     DatabaseReference mReference;
     FirebaseAuth mAuth;
     List<String> idEleves;
-    List<Eleve> eleveLists;
-    ListE listE;
-    Eleve eleve;
+    List<Activite> eleveActivite;
+    ListEl listA;
+    Activite eleve;
     Model_Activites model_activites;
-    List<String> classe;
+    List<Model_Activites> activites;
+    List<String> added;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -52,24 +54,36 @@ public class ActivitesFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_activites, container, false);
         mRecyclerView = root.findViewById(R.id.recyclerView);
 
-        mReference = FirebaseDatabase.getInstance().getReference().child("activites").child("1");
-        mReference.keepSynced(true);
-
         idEleves = new ArrayList<>();
-        eleveLists = new ArrayList<>();
-        classe = new ArrayList<>();
+        eleveActivite = new ArrayList<>();
+        activites = new ArrayList<>();
+        added = new ArrayList<>();
         mReference = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
 
-        mRecyclerView.setHasFixedSize(true);
+        /*mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());*/
+
+        readList(new FirebaseCallBack2() {
+            @Override
+            public void onCallBack(List<Model_Activites> list2) {
+                initRecyclerView();
+            }
+        });
+
 
 
         return root;
     }
 
-    @Override
+    private void initRecyclerView() {
+        ActivityAdapter activityAdapter = new ActivityAdapter(activites, getActivity());
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        mRecyclerView.setAdapter(activityAdapter);
+    }
+
+    /*@Override
     public void onStart() {
         super.onStart();
         FirebaseRecyclerAdapter<Model_Activites,Activies_Holder>firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Model_Activites, Activies_Holder>
@@ -85,46 +99,55 @@ public class ActivitesFragment extends Fragment {
 
         mRecyclerView.setAdapter(firebaseRecyclerAdapter);
 
-    }
+    }*/
 
-    public void readList(final ActivitesFragment.FirebaseCallBack firebaseCallBack) {
+    public void readList(final ActivitesFragment.FirebaseCallBack2 firebaseCallBack) {
         FirebaseUser user = mAuth.getCurrentUser();
-
+        activites.clear();
         mReference = FirebaseDatabase.getInstance().getReference();
         mReference.child("parentEleveAttendees").child("" + user.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.hasChildren()) {
                     for (DataSnapshot child : dataSnapshot.getChildren()) {
-                        listE = child.getValue(ListE.class);
-                        idEleves.add(listE.getId());
-                        Log.d("IdRecup", "Value is: " + listE.getId());
+                        listA = child.getValue(ListEl.class);
+                        idEleves.add(listA.getId());
+
                     }
 
                     mReference.child("eleves").addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             for (DataSnapshot child : dataSnapshot.getChildren()) {
-                                eleve = child.getValue(Eleve.class);
+                                eleve = child.getValue(Activite.class);
                                 for (int i = 0; i < idEleves.size(); i++) {
                                     if (eleve.getId().equals(idEleves.get(i))) {
-                                        eleveLists.add(new Eleve(eleve.getClasse(), eleve.getId(), eleve.getnom()));
+                                        eleveActivite.add(new Activite(eleve.getClasse(), eleve.getId(), eleve.getnom()));
                                     }
                                 }
 
-                            }
 
+                            }
+                            //Log.d("IdRecup", "Fragemnt  size" + eleveActivite.size());
                             mReference.child("activites").addValueEventListener(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
                                     for (DataSnapshot child : dataSnapshot.getChildren()) {
                                         model_activites = child.getValue(Model_Activites.class);
-                                        for (int i = 0; i < eleveLists.size(); i++) {
-                                            if (model_activites.getClass().equals(idEleves.get(i))) {
-                                                eleveLists.add(new Eleve(eleve.getClasse(), eleve.getId(), eleve.getnom()));
+                                        //Log.d("IdRecup", "Fragemnt  " + model_activites.getLibelle()+""+ model_activites.getType()+""+ model_activites.getDate()+""+model_activites.getimageUrl());
+                                        for (int i = 0; i < eleveActivite.size(); i++) {
+                                            Log.d("IdRecup", "Fragemnt  size" +model_activites.getClasse());
+                                            if ((model_activites.getClasse() == eleveActivite.get(i).getClasse()) & (!activites.contains(model_activites.getClasse()))) {
+                                                added.add(eleveActivite.get(i).getId());
+                                                Log.d("IdRecup", "Fragemnt  " + model_activites.getLibelle()+""+ model_activites.getType()+""+ model_activites.getDate()+""+model_activites.getimageUrl());
+                                                activites.add(new Model_Activites(model_activites.getLibelle(), model_activites.getType(), model_activites.getDate(),model_activites.getimageUrl(),model_activites.getClasse()));
                                             }
                                         }
                                     }
+
+                                    Log.d("IdRecup", "Fragemnt  " + activites);
+                                    firebaseCallBack.onCallBack(activites);
                                 }
 
                                 @Override
@@ -132,7 +155,7 @@ public class ActivitesFragment extends Fragment {
 
                                 }
                             });
-                            firebaseCallBack.onCallBack(eleveLists);
+
                         }
 
                         @Override
@@ -152,8 +175,8 @@ public class ActivitesFragment extends Fragment {
     }
 
 
-    private interface FirebaseCallBack {
-        void onCallBack(List<Eleve> list);
+    private interface FirebaseCallBack2 {
+        void onCallBack(List<Model_Activites> list2);
     }
 
 }
