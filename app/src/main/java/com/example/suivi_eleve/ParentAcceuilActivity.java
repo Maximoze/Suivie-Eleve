@@ -134,7 +134,6 @@ public class ParentAcceuilActivity extends AppCompatActivity implements Navigati
                         }
                     });
 
-
                 }
             }
 

@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">Suivi-Eleve</string>
     <string name="buttonEnseignant">Enseignant</string>
     <string name="buttonParent">Parent</string>
     <string name="title_activity_parent_acceuil">Suivie-Elève</string>
@@ -112,5 +111,6 @@
     <string name="conten_tel_profil">conten_tel</string>
     <string name="conten_email_profil">conten_email</string>
     <string name="conten_mdp_profil">conten_mdp</string>
+    <string name="app_name">Djanggal</string>
 
 </resources>

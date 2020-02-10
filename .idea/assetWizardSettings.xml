@@ -168,9 +168,11 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="autoMirrored" value="true" />
                             <entry key="color" value="32af7e" />
-                            <entry key="outputName" value="ic_photo" />
-                            <entry key="sourceFile" value="F:\Android Devollopement\Android Project\Icones\4288584andbusinessfinancepersonalportfolioprofileresume-115772_115741.svg" />
+                            <entry key="outputName" value="ic_djanggal_app" />
+                            <entry key="sourceFile" value="F:\Android Devollopement\Android Project\Icones\djanggal_app.svg" />
                           </map>
                         </option>
                       </PersistentState>
