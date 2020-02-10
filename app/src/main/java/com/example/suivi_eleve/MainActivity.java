@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String identite;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,13 +55,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mAuth = FirebaseAuth.getInstance();
 
+
         parentButton.setOnClickListener(this);
         enseignantButton.setOnClickListener(this);
 
         connexionButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View view) {
+            public void onClick(View view){
                 Login();
             }
         });
@@ -66,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void Login() {
-        String utilisateur = username.getText().toString();
+        String utilisateur = username.getText().toString().trim();
         String motpasse = password.getText().toString();
         mAuth.signInWithEmailAndPassword(utilisateur, motpasse)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -96,6 +100,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                                 }
                                             }
                                             if (verif) {
+
+
                                                 Intent intentEnseignant = new Intent(MainActivity.this, EnseignantDashbordActivity.class);
                                                 startActivity(intentEnseignant);
                                             } else {

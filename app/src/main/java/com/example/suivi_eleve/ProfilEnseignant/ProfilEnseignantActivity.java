@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.suivi_eleve.LoginActivity;
+import com.example.suivi_eleve.MainActivity;
 import com.example.suivi_eleve.ProfilParent.Model_Parent;
 import com.example.suivi_eleve.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -56,7 +57,7 @@ public class ProfilEnseignantActivity extends AppCompatActivity {
         deconnexion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent Intentprofil = new Intent(ProfilEnseignantActivity.this, LoginActivity.class);
+                Intent Intentprofil = new Intent(ProfilEnseignantActivity.this, MainActivity.class);
                 startActivity(Intentprofil);
             }
 

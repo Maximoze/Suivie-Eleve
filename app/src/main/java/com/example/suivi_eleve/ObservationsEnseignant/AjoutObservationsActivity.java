@@ -105,9 +105,9 @@ public class AjoutObservationsActivity extends AppCompatActivity implements Popu
                         Toast.makeText(AjoutObservationsActivity.this, "NO data", Toast.LENGTH_LONG).show();
                     }
                 });
-                Toast.makeText(AjoutObservationsActivity.this, "count"+counter, Toast.LENGTH_LONG).show();
 
                 ref.child("Observations").child(eleveselect).child(""+counter).setValue(observation);
+                Toast.makeText(AjoutObservationsActivity.this, "Observation envoyer", Toast.LENGTH_LONG).show();
 
             }
         });
@@ -128,7 +128,6 @@ public class AjoutObservationsActivity extends AppCompatActivity implements Popu
 
     @Override
     public boolean onMenuItemClick(MenuItem item) {
-        Toast.makeText(this, "Selected Item: " + item.getItemId(), Toast.LENGTH_SHORT).show();
         eleveSpinner.setText(item.getTitle());
         eleveSelected = item.getItemId();
         return false;

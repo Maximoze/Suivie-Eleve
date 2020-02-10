@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfilEnseignant.ProfilEnseignantActivity"
-    android:background="@color/colorWhite">
+    android:background="@color/colorWhite"
+    android:padding="15dp">
 
 
     <ImageView
@@ -32,6 +33,7 @@
         android:layout_marginStart="25dp"
         android:background="@drawable/bordure"
         android:padding="16dp"
+        android:layout_marginLeft="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"

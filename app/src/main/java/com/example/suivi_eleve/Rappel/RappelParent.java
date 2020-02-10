@@ -51,10 +51,7 @@ public class RappelParent extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_rappel);
 
         recyclerView = findViewById(R.id.recyclerView);
-<<<<<<< HEAD
 
-=======
->>>>>>> 085e16cfb598be83421327953deacc5eb24c0629
         mAuth = FirebaseAuth.getInstance();
         this.recupAbsents = new ArrayList<>();
 
