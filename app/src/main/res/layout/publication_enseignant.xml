@@ -100,10 +100,17 @@
             app:hintTextAppearance="@style/TextAppearance.AppCompat.Body1">
 
             <com.google.android.material.textfield.TextInputEditText
+<<<<<<< HEAD
                 android:id="@+id/edit_text_ajout_description_publication"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/title_hint_type_ajout_description"
+=======
+                android:id="@+id/edit_text_ajout_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/title_des"
+>>>>>>> 7af94fb6a88977f1fe69c99b386bceca1cc84c8c
                 android:textColorHint="#004D40" />
         </com.google.android.material.textfield.TextInputLayout>
 
