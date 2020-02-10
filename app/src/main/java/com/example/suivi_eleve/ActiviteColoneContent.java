@@ -8,12 +8,22 @@ public class ActiviteColoneContent  {
     public String type;
     public String date;
     String ImageUrl;
+    long classe;
 
-    public ActiviteColoneContent(String libelle, String type, String date, String ImageUrl){
+    public ActiviteColoneContent(String libelle, String type, String date, String ImageUrl, long classe){
         this.libelle = libelle;
         this.type = type;
         this.date = date;
         this.ImageUrl = ImageUrl;
+        this.classe = classe;
+    }
+
+    public long getClasse() {
+        return classe;
+    }
+
+    public void setClasse(long classe) {
+        this.classe = classe;
     }
 
     public String getImageUrl() {

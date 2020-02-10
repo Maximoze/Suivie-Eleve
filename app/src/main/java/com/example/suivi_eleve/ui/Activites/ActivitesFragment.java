@@ -13,12 +13,9 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.suivi_eleve.EleveAdapater;
-import com.example.suivi_eleve.ListE;
-import com.example.suivi_eleve.ParentAcceuilActivity;
+
 import com.example.suivi_eleve.R;
-import com.example.suivi_eleve.Rappel.Eleve;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -26,7 +23,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,18 +57,12 @@ public class ActivitesFragment extends Fragment {
         mReference = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
 
-        /*mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        mRecyclerView.setItemAnimator(new DefaultItemAnimator());*/
-
         readList(new FirebaseCallBack2() {
             @Override
             public void onCallBack(List<Model_Activites> list2) {
                 initRecyclerView();
             }
         });
-
-
 
         return root;
     }
@@ -82,24 +72,6 @@ public class ActivitesFragment extends Fragment {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecyclerView.setAdapter(activityAdapter);
     }
-
-    /*@Override
-    public void onStart() {
-        super.onStart();
-        FirebaseRecyclerAdapter<Model_Activites,Activies_Holder>firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Model_Activites, Activies_Holder>
-                (Model_Activites.class,R.layout.row_activites,Activies_Holder.class,mReference) {
-            @Override
-            protected void populateViewHolder(Activies_Holder activies_holder, Model_Activites model_activites, int i) {
-                Picasso.with(getActivity()).load(model_activites.getimageUrl()).into(activies_holder.imageUrl);
-                activies_holder.libelle.setText(model_activites.getLibelle());
-                activies_holder.type.setText(model_activites.getType());
-                activies_holder.date.setText(model_activites.getDate());
-            }
-        };
-
-        mRecyclerView.setAdapter(firebaseRecyclerAdapter);
-
-    }*/
 
     public void readList(final ActivitesFragment.FirebaseCallBack2 firebaseCallBack) {
         FirebaseUser user = mAuth.getCurrentUser();
@@ -125,27 +97,29 @@ public class ActivitesFragment extends Fragment {
                                         eleveActivite.add(new Activite(eleve.getClasse(), eleve.getId(), eleve.getnom()));
                                     }
                                 }
-
-
                             }
-                            //Log.d("IdRecup", "Fragemnt  size" + eleveActivite.size());
+
                             mReference.child("activites").addValueEventListener(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                                     for (DataSnapshot child : dataSnapshot.getChildren()) {
+                                        boolean test = false;
                                         model_activites = child.getValue(Model_Activites.class);
-                                        //Log.d("IdRecup", "Fragemnt  " + model_activites.getLibelle()+""+ model_activites.getType()+""+ model_activites.getDate()+""+model_activites.getimageUrl());
+
                                         for (int i = 0; i < eleveActivite.size(); i++) {
-                                            Log.d("IdRecup", "Fragemnt  size" +model_activites.getClasse());
-                                            if ((model_activites.getClasse() == eleveActivite.get(i).getClasse()) & (!activites.contains(model_activites.getClasse()))) {
+                                            if ((model_activites.getClasse() == eleveActivite.get(i).getClasse())) {
+                                                test = true;
                                                 added.add(eleveActivite.get(i).getId());
-                                                Log.d("IdRecup", "Fragemnt  " + model_activites.getLibelle()+""+ model_activites.getType()+""+ model_activites.getDate()+""+model_activites.getimageUrl());
-                                                activites.add(new Model_Activites(model_activites.getLibelle(), model_activites.getType(), model_activites.getDate(),model_activites.getimageUrl(),model_activites.getClasse()));
                                             }
                                         }
-                                    }
 
+                                        if (test){
+                                            Log.d("IdRecup", "Fragemnt  " + model_activites.getLibelle() + "" + model_activites.getType() + "" + model_activites.getDate() + "" + model_activites.getimageUrl());
+                                            activites.add(new Model_Activites(model_activites.getLibelle(), model_activites.getType(), model_activites.getDate(), model_activites.getimageUrl(), model_activites.getClasse()));
+                                        }
+
+                                    }
                                     Log.d("IdRecup", "Fragemnt  " + activites);
                                     firebaseCallBack.onCallBack(activites);
                                 }
@@ -157,14 +131,11 @@ public class ActivitesFragment extends Fragment {
                             });
 
                         }
-
                         @Override
                         public void onCancelled(@NonNull DatabaseError databaseError) {
 
                         }
                     });
-
-
                 }
             }
 

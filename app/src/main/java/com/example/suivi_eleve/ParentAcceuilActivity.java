@@ -43,7 +43,8 @@ public class ParentAcceuilActivity extends AppCompatActivity implements Navigati
     List<Eleve> eleveLists;
     RecyclerView eleveList;
     TextView username, mailText;
-
+    List<Info> inf;
+    Info info;
     Eleve eleve;
 
     FirebaseAuth mAuth;
@@ -62,9 +63,12 @@ public class ParentAcceuilActivity extends AppCompatActivity implements Navigati
         eleveList = findViewById(R.id.eleveListRecyclerView);
         idEleves = new ArrayList<>();
         eleveLists = new ArrayList<>();
+        inf = new ArrayList<>();
         mReference = FirebaseDatabase.getInstance().getReference();
         mReference.keepSynced(true);
         mAuth = FirebaseAuth.getInstance();
+        username = findViewById(R.id.username);
+        mailText = findViewById(R.id.mailtext);
 
         toggle = new ActionBarDrawerToggle(this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -78,10 +82,7 @@ public class ParentAcceuilActivity extends AppCompatActivity implements Navigati
 
         navigationView.setNavigationItemSelectedListener(this);
 
-        //String mail = mAuth.getCurrentUser().getUid().getEmail();
-        //mailText.setText(mail);
-
-
+        profil();
         readList(new FirebaseCallBack() {
             @Override
             public void onCallBack(List<Eleve> list) {
@@ -139,10 +140,34 @@ public class ParentAcceuilActivity extends AppCompatActivity implements Navigati
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
+
             }
         });
     }
 
+
+    private void profil() {
+
+        mReference = FirebaseDatabase.getInstance().getReference();
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = mAuth.getCurrentUser();
+        String uid = user.getUid();
+
+        mReference.child("Parent").child(uid).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                username.setText(dataSnapshot.child("nom").getValue(String.class));
+                mailText.setText(dataSnapshot.child("email").getValue(String.class));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+        mReference.keepSynced(true);
+    }
 
     private interface FirebaseCallBack {
         void onCallBack(List<Eleve> list);

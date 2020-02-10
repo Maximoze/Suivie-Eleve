@@ -67,7 +67,6 @@ public class EvenementsFragment extends Fragment {
             }
         };
 
-
         mRecyclerView_evenement.setAdapter(firebaseRecyclerAdapter);
 
 

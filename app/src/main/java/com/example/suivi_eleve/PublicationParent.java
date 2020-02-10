@@ -18,5 +18,7 @@ public class PublicationParent  extends AppCompatActivity {
         TextView teste_publication = (TextView) findViewById(R.id.text_publication);
         ImageButton publication = (ImageButton) findViewById(R.id.addImagePublicationParent);
         ImageButton  ajout= (ImageButton) findViewById(R.id.ajout);
+
+
     }
 }
