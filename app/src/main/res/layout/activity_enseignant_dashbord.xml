@@ -4,21 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EnseignantDashbordActivity">
+    tools:context=".EnseignantDashbordActivity"
+    android:background="@color/colorWhite">
 
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="214dp"
         android:layout_height="53dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="92dp"
         android:text="@string/your_string"
 
-        android:textSize="23dp"
+        android:textSize="26sp"
         android:textStyle="bold"
 
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.659"
+        app:layout_constraintHorizontal_bias="0.553"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/Tableau_de_bord" />
@@ -34,17 +35,25 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.462"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/colorWhite"
+        app:layout_constraintCircleRadius="20dp"/>
 
-    <RelativeLayout
-        android:layout_width="327dp"
-        android:layout_height="417dp"
-        android:background="@drawable/bordure"
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv"
+        android:layout_width="350dp"
+        android:layout_height="420dp"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardElevation="4dp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.644">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <ImageButton
             android:id="@+id/rappel"
@@ -53,18 +62,16 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="71dp"
+            android:layout_marginTop="50dp"
             android:background="@drawable/rappel" />
 
         <ImageButton
             android:id="@+id/activite"
-            android:layout_width="128dp"
-            android:layout_height="116dp"
+            android:layout_width="133dp"
+            android:layout_height="122dp"
             android:layout_above="@+id/observation"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="33dp"
-            android:layout_marginTop="71dp"
+            android:layout_marginStart="210dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="9dp"
             android:layout_marginBottom="41dp"
             android:layout_toEndOf="@+id/rappel"
@@ -75,23 +82,19 @@
             android:layout_width="137dp"
             android:layout_height="119dp"
             android:layout_below="@+id/rappel"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="41dp"
-            android:layout_marginBottom="67dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/evenement" />
 
         <ImageButton
             android:id="@+id/observation"
             android:layout_width="137dp"
             android:layout_height="119dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="250dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginBottom="67dp"
-            android:layout_toEndOf="@+id/evenement"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/observation" />
 
         <TextView
@@ -99,10 +102,8 @@
             android:layout_width="191dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/rappel"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="21dp"
-            android:layout_marginTop="-2dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="175dp"
             android:layout_marginEnd="115dp"
             android:text="@string/title_Rappel"
             android:textSize="24sp" />
@@ -112,8 +113,8 @@
             android:layout_width="191dp"
             android:layout_height="wrap_content"
             android:layout_above="@+id/observation"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="-68dp"
+            android:layout_marginStart="225dp"
+            android:layout_marginTop="175dp"
             android:layout_marginBottom="8dp"
             android:text="@string/title_Activites"
             android:textSize="24sp" />
@@ -122,26 +123,25 @@
             android:id="@+id/textView4"
             android:layout_width="191dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="370dp"
             android:layout_marginEnd="117dp"
-            android:layout_marginBottom="29dp"
             android:text="@string/title_evenements"
             android:textSize="24sp" />
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="191dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="-38dp"
-            android:layout_marginBottom="29dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="370dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:text="@string/title_observations"
             android:textSize="22sp" />
 
+    </androidx.cardview.widget.CardView>
 
-    </RelativeLayout>
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
